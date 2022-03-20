@@ -6,6 +6,16 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
+// Poin 2
+app.get("/logout", (req, res) => {
+  res.send("Login jika ingin masuk kembali - poin 2 ");
+});
+
+// Poin 3
+app.get("admin/rps/lihat", (req, res) => {
+  res.send("Halaman Admin menambahkan dosen - poin 3");
+});
+
 // Poin 9
 app.get("/dosen/cpmk/tambah", (req, res) => {
   res.send("Halaman dosen menambah CPMK mata kuliah - poin 9");
@@ -19,6 +29,21 @@ app.get("/dosen/cpmk/ubah", (req, res) => {
 // Poin 11
 app.get("/dosen/cpmk/hapus", (req, res) => {
   res.send("Halaman dosen menghapus CPMK mata kuliah - poin 11");
+});
+
+// Poin 15
+app.get("/dosen/nilai/tambah", (req, res) => {
+  res.send("Halaman dosen menambah nilai - poin 15");
+});
+
+// Poin 16
+app.get("/dosen/nilai/edit", (req, res) => {
+  res.send("Halaman dosen mmengedit nilai - poin 16");
+});
+
+// Poin 17
+app.get("/dosen/nilai/tambah", (req, res) => {
+  res.send("Halaman dosen menghapus nilai - poin - poin 17");
 });
 
 // Poin 18
