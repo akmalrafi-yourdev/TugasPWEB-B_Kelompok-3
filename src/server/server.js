@@ -26,6 +26,7 @@ app.get("/mahasiswa/rps/cari", (req, res) => {
   res.send("Halaman Mahasiswa mencari nama mata kuliah atau kode mata kuliah di RPS - poin 21");
 });
 
+
 //Poin 23
 app.get("/mahasiswa/rps/export", (req, res) => {
   res.send("Halaman Mahasiswa mengekspor RPS menjadi PDF - poin 23");
