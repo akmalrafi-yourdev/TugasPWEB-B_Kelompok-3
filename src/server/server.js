@@ -6,6 +6,11 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
+// Poin 1
+app.get("/login", (req, res) => {
+  res.send("Halaman yang manampilkan Login untuk mahasiswa dan dosen - poin 1 ");
+});
+
 // Poin 2
 app.get("/logout", (req, res) => {
   res.send("Login jika ingin masuk kembali - poin 2 ");
@@ -29,6 +34,21 @@ app.get("/dosen/cpmk/ubah", (req, res) => {
 // Poin 11
 app.get("/dosen/cpmk/hapus", (req, res) => {
   res.send("Halaman dosen menghapus CPMK mata kuliah - poin 11");
+});
+
+// Poin 12
+app.get("/dosen/referensi/tambah", (req, res) => {
+  res.send("Halaman dosen menambah referensi dari dosen - poin 12");
+});
+
+// Poin 13
+app.get("/dosen/referensi/edit", (req, res) => {
+  res.send("Halaman dosen mengubah referensi dari dosen - poin 13");
+});
+
+// Poin 14
+app.get("/dosen/referensi/hapus", (req, res) => {
+  res.send("Halaman dosen menghapus referensi dari dosen - poin 14");
 });
 
 // Poin 15
