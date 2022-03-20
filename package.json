@@ -1,5 +1,22 @@
 {
   "dependencies": {
     "express": "^4.17.3"
-  }
+  },
+  "name": "loki_b3",
+  "description": "Tugas Pemrograman Web B - Universitas Andalas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akmalrafi-yourdev/loki_b3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akmalrafi-yourdev/loki_b3/issues"
+  },
+  "homepage": "https://github.com/akmalrafi-yourdev/loki_b3#readme"
 }
