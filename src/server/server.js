@@ -21,6 +21,31 @@ app.get("admin/rps/lihat", (req, res) => {
   res.send("Halaman Admin menambahkan dosen - poin 3");
 });
 
+//Poin 4
+app.get("/admin/rps/lihatRPS", (req, res) => {
+  res.send("Halaman Admin Melihat Laporan RPS - poin 4");
+});
+
+//Poin 5
+app.get("/admin/rps/cetak", (req, res) => {
+  res.send("Halaman Admin Mencetak Laporan RPS - poin 5");
+});
+
+//Poin 6
+app.get("/dosen/rps/tambah", (req, res) => {
+  res.send("Halaman Dosen Menambahkan RPS baru - poin 6");
+});
+
+//Poin 7
+app.get("/dosen/rps/ubah", (req, res) => {
+  res.send("Halaman Dosen Mengubah RPS - poin 7");
+});
+
+//Poin 8
+app.get("/dosen/rps/revisi", (req, res) => {
+  res.send("Halaman Dosen Merevisi RPS lama - poin 8");
+});
+
 // Poin 9
 app.get("/dosen/cpmk/tambah", (req, res) => {
   res.send("Halaman dosen menambah CPMK mata kuliah - poin 9");
