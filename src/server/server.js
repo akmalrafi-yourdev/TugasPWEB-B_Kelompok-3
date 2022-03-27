@@ -23,27 +23,104 @@ app.get("admin/rps/lihat", (req, res) => {
 
 //Poin 4
 app.get("/admin/rps/lihatRPS", (req, res) => {
-  res.send("Halaman Admin Melihat Laporan RPS - poin 4");
+
+  let pesan = {
+    message : "Berikut Laporan Dari RPS :",
+    "Program Studi" : "Sistem Informasi",
+    "Fakultas" : "Teknologi Informasi",
+    "RPS yang menggunakan project based": {
+      "Pertemuan" : ['P3','P4','P5','P6','P7'],
+    },
+    "Mata Kuliah": {
+      "Mata Kuliah": "Pemrograman Web",
+      "Bobot": "3 SKS",
+      "semester": "4",
+    },
+  };
+  res.json(pesan)
+  console.log("Berhasil Menampilkan ")
 });
 
 //Poin 5
 app.get("/admin/rps/cetak", (req, res) => {
-  res.send("Halaman Admin Mencetak Laporan RPS - poin 5");
+  let pesan = {
+    message : "Berikut Laporan Dari RPS Yang Akan Dicetak:",
+    "Program Studi" : "Sistem Informasi",
+    "Fakultas" : "Teknologi Informasi",
+    "RPS yang menggunakan project based": {
+      "Pertemuan" : ['P3','P4','P5','P6','P7'],
+    },
+    "Mata Kuliah": {
+      "Mata Kuliah": "Pemograman Web",
+      "Bobot": "3 SKS",
+      "semester": "4",
+    },
+  };
+  res.json(pesan)
+  console.log("Berhasil Mencetak RPS")
 });
 
 //Poin 6
-app.get("/dosen/rps/tambah", (req, res) => {
-  res.send("Halaman Dosen Menambahkan RPS baru - poin 6");
+app.get("/dosen/rps/tambah1", (req, res) => {
+  let pesan = {
+    message : "Tambahkan RPS Untuk Mata Kuliah:",
+    "Program Studi" : "Sistem Informasi",
+    "Fakultas" : "Teknologi Informasi",
+    "RPS yang menggunakan project based": {
+      "Pertemuan" : [],
+    },
+    "Mata Kuliah": {
+      "Mata Kuliah": " ",
+      "Bobot": " ",
+      "semester": " ",
+    },
+  };
+  res.json(pesan)
+  console.log("Berhasil Menambahkan RPS ")
 });
 
 //Poin 7
 app.get("/dosen/rps/ubah", (req, res) => {
-  res.send("Halaman Dosen Mengubah RPS - poin 7");
+  let pesan = {
+    message1 : "Berikut Laporan Dari RPS :",
+    "Program Studi" : "Sistem Informasi",
+    "Fakultas" : "Teknologi Informasi",
+    "RPS yang menggunakan project based": {
+      "Pertemuan" : ['P3','P4','P5','P6','P7'],
+    },
+    "Mata Kuliah": {
+      "Mata Kuliah": "Pemograman Web",
+      "Bobot": "3 SKS",
+      "semester": "4",
+    },
+    message2 : "Pilih Bagian RPS yang akan diubah"
+  };
+
+  res.json(pesan)
+  console.log("Berhasil Mengubah RPS ")
 });
 
 //Poin 8
 app.get("/dosen/rps/revisi", (req, res) => {
-  res.send("Halaman Dosen Merevisi RPS lama - poin 8");
+  let pesan = {
+    message1 : "Berikut Laporan Dari RPS :",
+    "Program Studi" : "Sistem Informasi",
+    "Fakultas" : "Teknologi Informasi",
+    "RPS yang menggunakan project based": {
+      "Pertemuan" : ['P3','P4','P5','P6','P7'],
+    },
+    "Mata Kuliah": {
+      "Mata Kuliah": "Pemograman Web",
+      "Bobot": "3 SKS",
+      "semester": "4",
+    },
+    message2 : "Pilih Bagian RPS yang akan direvisi"
+  };
+
+
+  res.json(pesan)
+  console.log("Berhasil Merevisi RPS ")
+
 });
 
 // Poin 9
