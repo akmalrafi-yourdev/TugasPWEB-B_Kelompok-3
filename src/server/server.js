@@ -133,7 +133,12 @@ app.get("/dosen/rps/revisi", (req, res) => {
 
 // Poin 9
 app.get("/dosen/cpmk/tambah", (req, res) => {
-  res.send("Halaman dosen menambah CPMK mata kuliah - poin 9");
+  let r= {
+    "message" : " Anda Berhasil Menambah CPMK",
+    "status" : 0
+  }
+  res.json(r);
+  console.log("Berhasil Menambah CPMK ")
 });
 
 // Poin 10
