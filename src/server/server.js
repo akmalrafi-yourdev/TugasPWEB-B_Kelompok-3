@@ -145,17 +145,33 @@ app.get("/dosen/rps/revisi", (req, res) => {
 
 // Poin 9
 app.get("/dosen/cpmk/tambah", (req, res) => {
-  res.send("Halaman dosen menambah CPMK mata kuliah - poin 9");
+  let pesan= {
+    "message" : " Anda Berhasil Menambah CPMK",
+    "status" : 0
+  }
+  res.json(pesan);
+  console.log("Berhasil Menambah CPMK ")
 });
+
 
 // Poin 10
 app.get("/dosen/cpmk/ubah", (req, res) => {
-  res.send("Halaman dosen mengubah CPMK mata kuliah - poin 10");
+  let pesan= {
+    "message" : " Anda Berhasil Mengubah CPMK",
+    "status" : 0
+  }
+  res.json(pesan);
+  console.log("Berhasil Mengubah CPMK ")
 });
 
 // Poin 11
 app.get("/dosen/cpmk/hapus", (req, res) => {
-  res.send("Halaman dosen menghapus CPMK mata kuliah - poin 11");
+  let pesan= {
+    "message" : " Anda Berhasil Menghapus CPMK",
+    "status" : 0
+  }
+  res.json(pesan);
+  console.log("Berhasil Menghapus CPMK ")
 });
 
 // Poin 12
@@ -270,7 +286,38 @@ app.get("/mahasiswa/rps/cari", (req, res) => {
 
 //Poin 22
 app.get("/mahasiswa/rps/lihat", (req, res) => {
-  res.send("Halaman Mahasiswa melihat detail RPS - poin 22");
+  let pesan= {
+    "nama" : " pemrograman web",
+    "kode" : "JSI62125",
+    "sks" : 3,
+    "semester" : 4,
+    "dosen pengampu" : "Husnil Kamil. . MT",
+    "cpl" : [
+      {
+        "kode" : "CP-1",
+        "capaian" : "Mengidentifikasi, memformulasikan dan memecahkan permasalahan kebutuhan informasi dari suatu organisasi"
+      }
+    ],
+    "cpmk" : ["Mahasiswa mampu menjelaskan konsep dasar dan komponen aplikasi berbasis web (CP-1, CP-2)","Mahasiswa mampu menggunakan salah satu technology stack untuk membangun aplikasi berbasis web (CP-1, CP-2)","Mahasiswa mampu menggunakan pemograman asynchronous . (CP-2, CP-3)","Mahasiswa mampu menerapkan keamanan untuk situs web . (CP-2, CP-3","Mahasiswa mampu menggunakan dan mendesain format data JSON. (CP-2, CP-3)", "Mahasiswa mampu deploy aplikasi web ke internet. (CP-2)","Mahasiswa mampu mendemonstrasikan keterampilan bekerja sama dengan tim (CP-3)"],
+    "Deskripsi Singkat" : "Mata kuliah pemrograman web merupakan mata kuliah yang membahas tentang teknik pengembangan website dari hulu ke hilir, yaitu mulai dari algoritma dalam pemrograman web, pembuatan website (front-end dan back-end), hosting, hingga dokumentasi dan hukum kekayaan intelektual dari program yang dihasilkan nantinya.",
+    "Materi Pembelajaran" : ["Server Side Web Programming","Client Side Web Programming"],
+    "pustaka" : [
+      {
+        "utama" : ["Matt Doyle, 2009, “Beginning PHP 5.3”, Wrox","Nicholas Zakas, 2012, “Professional Javascript for Web Developer”, John Wiley & Sons"],
+        "Pendukung" : ["Mark Pilgrim, 2010, “HTML5 Up and Running”, O’Reilly","Steve Fulton; Jeff Fulton, 2011, “HTML5 Canvas”, O’Reilly","S. Stefanor, 2010, “Javascript Patterns”, O’Reilly"],
+      }
+    ],
+    "Media Pembelajaran" : [
+      {
+        "Perangkat lunak" : ["Power point Code Editor (VS Code)", "Browser", "NodeJS", "Rest Client (Postman)", "Database server (MySQL)", "Version Control (Git)"],
+        "Perangkat keras" : ["Projector", "Laptop"],
+        }
+    ],
+    "Assessment" : ["Project", "Tugas", "Quiz", "UTS", "UAS"],
+    "Matakuliah Syarat" : ["Struktur Data dan Algoritma", "Dasar-Dasar Pemrograman" ,"Pemograman Berorientasi Objek"]
+  }
+  res.json(pesan);
+  console.log("RPS Berhasil Ditampilkan ")
 });
 
 //Poin 23
