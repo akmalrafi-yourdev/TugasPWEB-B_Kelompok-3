@@ -10,11 +10,13 @@ app.get("/", (req, res) => {
 app.get("/login", (req, res) => {
   let pesan = {
     message : "Silahkan login terlebih dahulu",
+    "login" : {
     "username" : "",
-    "password" : "",
+    "password" : ""
+    },
   };
   res.json(pesan)
-  console.log("page berhasil ditampilkan")
+  console.log("berhasil login")
 });
 
 // Poin 2
@@ -159,19 +161,42 @@ app.get("/dosen/cpmk/hapus", (req, res) => {
 // Poin 12
 app.get("/dosen/referensi/tambah", (req, res) => {
   let h={
-    
+    message :"Tambahkan referensi materi :",
+    "Kode referensi" : "R0001",
+    "Nama" : "You Dont Know JS",
+    "Pengarang" : "Kyle Simpson",
+    "link" : ["https://github.com/getify/You-Dont-Know-JS"]
   }
-  res.send("Halaman dosen menambah referensi dari dosen - poin 12");
+  req.json(h);
+  console.log("Materi Referensi berhasil ditambah");
 });
 
 // Poin 13
 app.get("/dosen/referensi/edit", (req, res) => {
-  res.send("Halaman dosen mengubah referensi dari dosen - poin 13");
+  let h={
+    message :"Update referensi materi :",
+    "Kode referensi" : "R0001",
+    "Nama" : "You Dont Know JS",
+    "Pengarang" : "Kyle Simpson",
+    "link" : ["https://github.com/getify/You-Dont-Know-JS",
+              "https://eloquentjavascript.net/"]
+  }
+  req.json(h);
+  console.log("Materi Referensi berhasil diupdate");
 });
 
 // Poin 14
 app.get("/dosen/referensi/hapus", (req, res) => {
-  res.send("Halaman dosen menghapus referensi dari dosen - poin 14");
+  let h={
+    message :"Hapus referensi materi :",
+    "Kode referensi" : "R0001",
+    "Nama" : "You Dont Know JS",
+    "Pengarang" : "Kyle Simpson",
+    "link" : ["https://github.com/getify/You-Dont-Know-JS",
+              "https://eloquentjavascript.net/"]
+  }
+  req.json(h);
+  console.log("Materi Referensi berhasil dihapus");
 });
 
 // Poin 15
