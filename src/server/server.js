@@ -8,7 +8,13 @@ app.get("/", (req, res) => {
 
 // Poin 1
 app.get("/login", (req, res) => {
-  res.send("Halaman yang manampilkan Login untuk mahasiswa dan dosen - poin 1 ");
+  let pesan = {
+    message : "Silahkan login terlebih dahulu",
+    "username" : "",
+    "password" : "",
+  };
+  res.json(pesan)
+  console.log("page berhasil ditampilkan")
 });
 
 // Poin 2
@@ -140,6 +146,9 @@ app.get("/dosen/cpmk/hapus", (req, res) => {
 
 // Poin 12
 app.get("/dosen/referensi/tambah", (req, res) => {
+  let h={
+    
+  }
   res.send("Halaman dosen menambah referensi dari dosen - poin 12");
 });
 
