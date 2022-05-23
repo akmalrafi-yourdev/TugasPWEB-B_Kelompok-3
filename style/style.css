@@ -1,0 +1,13 @@
+.nav-link:hover{
+    background-color: grey;
+}
+
+.nav-item {
+    height: 5rem;
+    width: 5rem;
+    float: center;
+}
+
+.nav-item img {
+    margin: auto;
+}
