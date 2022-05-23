@@ -11,8 +11,9 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../../style/style.css">
+    <script src="https://kit.fontawesome.com/922099f6ae.js" crossorigin="anonymous"></script>
 
-    <title>Hello, world!</title>
+    <title>Dashboard Mahasiswa</title>
 </head>
 
 <body>
@@ -28,12 +29,16 @@
                         <p>2011521026</p>
                     </div>
                 </div>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!">Menu #1</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!">Menu #2</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!">Menu #3</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!">Menu
+                    #1</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!">Menu
+                    #2</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!">Menu
+                    #3</a>
             </div>
             <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center" href="#!">Logout</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3 text-center"
+                    href="#!">Logout</a>
             </div>
         </div>
         <!-- Page content wrapper-->
@@ -60,15 +65,57 @@
                 </div>
             </nav>
             <!-- Page content-->
-            <div class="container-fluid">
-                <div class="card">
-                    <div class="card-header">
-                        Featured
+            <div class="container">
+                <div class="row g-3 justify-content-end">
+                    <div class="col-3">
+                        <input type="password" class="form-control" id="inputPassword2"
+                            placeholder="Cari mata kuliah...">
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="col-1">
+                        <button type="submit" class="btn btn-primary" style="margin-top: 0px;">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="card">
+                            <div class="card-header">
+                                List Mata Kuliah
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <a href="#" class="text-decoration-none">
+                                        <li>Pemrograman Web</li>
+                                    </a>
+                                    <a href="#" class="text-decoration-none">
+                                        <li>Pengantar Keamanan Informasi</li>
+                                    </a>
+                                    <a href="#" class="text-decoration-none">
+                                        <li>Rekayasa Perangkat Lunak</li>
+                                    </a>
+                                    <a href="#" class="text-decoration-none">
+                                        <li>Machine Learning</li>
+                                    </a>
+                                    <a href="#" class="text-decoration-none">
+                                        <li>Mobile Development</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Sidenav
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
