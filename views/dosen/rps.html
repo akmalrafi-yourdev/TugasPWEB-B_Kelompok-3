@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kelompok 6 PWEB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel ="stylesheet" type="text/css" href="admin.css">
+    <link rel ="stylesheet" type="text/css" href="fontawesome-free-6.1.1-web/css/all.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> WELCOME | <b>UNIVERSITAS ANDALAS</b></a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="row no-gutters mt-5">
+      <div class="col-md-2 mt-2 pr-3 pt-4" style="background-color: #458D73;">
+        <ul class="nav flex-column ml-3 mb-5">
+          <li class="nav-item">
+              <img src="/src/dosen/user.png" class="img-thumbnail mx-auto d-block" alt="...">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#"><i class="fa-solid fa-gauge me-3"></i>Dashboard</a><hr class="text-white border-2 opacity-50">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"><i class="fa-solid fa-boxes-packing me-3"></i>RPS</a><hr class="text-white border-2 opacity-50">
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-10 p-5 pt-4">
+        <h3><i class="fa-solid fa-gauge me-3"></i>RPS</h3>
+        <i class="fa-solid fa-gauge me-3"></i>Rencana Pembelajaran Semester</h3><hr>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Pilihan Semester</th>
+              <th scope="col"><div class="dropdown">
+                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ganjil 2020/2021
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Genap 2020/2021</a></li>
+                  <li><a class="dropdown-item" href="#">Ganjil 2021/2022</a></li>
+                  <li><a class="dropdown-item" href="#">Genap 2021/2022</a></li>
+                </ul>
+              </div></th>
+              <th scope="col"><button type="button" class="btn btn-secondary btn-sm">Lihat</button></th>
+            </tr>
+          </thead>
+        </table>
+        <button type="button" class="btn btn-secondary btn-sm"> + Tambahkan</button>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Kode</th>
+              <th scope="col">Mata Kuliah</th>
+              <th scope="col">Dosen Pengampu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>001</td>
+              <td>Pengantar Sistem Informasi</td>
+              <td>Ullya Mega Wahyuni. . M.Kom</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>002</td>
+              <td>Dasar-Dasar Pemrograman</td>
+              <td>Adi Arga Arifnur. . M.Kom</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="admin.js"></script>
+  </body>
+</html>
