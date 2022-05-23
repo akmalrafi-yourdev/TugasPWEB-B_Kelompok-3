@@ -1,0 +1,1 @@
+{"version":"1.0.0","name":"loki_b3","dependencies":{"dotenv":{"version":"16.0.0"},"express":{"version":"4.17.3"},"jsonwebtoken":{"version":"8.5.1"},"mysql2":{"version":"2.3.3"}}}
