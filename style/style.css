@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .nav-link:hover{
     background-color: grey;
 }
@@ -11,3 +12,67 @@
 .nav-item img {
     margin: auto;
 }
+=======
+body {
+  background-size: cover;
+  background-image: url("../assets/Dosen.png");
+}
+
+.main-section {
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 25%;
+}
+
+.text-img {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.modal-content {
+  opacity: 90%;
+  padding: 0 0;
+  border-radius: 10px;
+  background-color: #458d73;
+  box-shadow: 0px 0px 3px #ffffff;
+}
+
+.logo-img {
+  margin-bottom: 20px;
+}
+
+.logo-img img {
+  height: 5rem;
+}
+
+.form-box {
+  padding: 2rem;
+  padding-bottom: 1rem;
+}
+
+.form-group input {
+  border: 0;
+  height: 38px;
+  width: 19rem;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+button {
+  width: 60%;
+  margin: 5px 0 25px;
+}
+
+.login {
+  color: white;
+  text-decoration: none !important;
+}
+
+.forgot {
+  padding: 5px 0;
+}
+
+.forgot a {
+  color: white;
+}
+>>>>>>> 14ebe2e729867105929aec1bda06dbde5d05b750
