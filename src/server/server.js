@@ -21,13 +21,13 @@ connection.query('SELECT 1 + 1 AS solution', (err, rows, fields) => {
 connection.end()
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send(`Hello World! Port is ${port}`);
 });
 
 // Poin 1
 app.get("/login", (req, res) => {
   let pesan = {
-    message: "Silahkan login terlebih dahulu",
+    message: "Silahkan login terlebih dahuluuussu",
     login: {
       username: "",
       password: "",
