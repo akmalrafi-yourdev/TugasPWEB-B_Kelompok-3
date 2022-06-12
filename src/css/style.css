@@ -3220,6 +3220,7 @@ fieldset:disabled .btn {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
+  margin-right: 10px;
 }
 .btn-primary:hover {
   color: #fff;
@@ -3300,6 +3301,7 @@ fieldset:disabled .btn {
   color: #fff;
   background-color: #198754;
   border-color: #198754;
+  margin-right: 10px;
 }
 .btn-success:hover {
   color: #fff;
@@ -3380,6 +3382,7 @@ fieldset:disabled .btn {
   color: #000;
   background-color: #ffc107;
   border-color: #ffc107;
+  margin-right: 10px;
 }
 .btn-warning:hover {
   color: #000;
