@@ -36,10 +36,11 @@
                 <input type="password" class="form-control" placeholder="Password" name="password" />
               </div>
               <br />
-              <button type="submit" class="btn btn-primary">
+              <button action='submit' onclick='startlog()' class="btn btn-primary">
                 <i class="fas fa-sign-in-alt"></i>
                 <a style="color: white; text-decoration: none">LOGIN</a>
               </button>
+              <p id='akses'></p>
             </form>
             <div class="forgot">
               <a href="#">Forgot password?</a>
@@ -48,8 +49,19 @@
           </div>
         </div>
       </div>
-    </div>
-
+    </div> 
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      function startlog(){
+      var net1 = document.getElementById('user-group').value + document.getElementById('password-group').value;
+      var net2 = ('blanter') + ('123');
+      if (net1 == net2) {
+      var logakses = document.getElementById('akses').innerHTML = 'Login Successfully';
+      }
+      else {
+      var logakses = document.getElementById('akses').innerHTML = 'Login Failed';
+      }
+      };
+    </script>
   </body>
 </html>

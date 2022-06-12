@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .nav-link:hover{
     background-color: grey;
 }
@@ -12,7 +12,7 @@
 .nav-item img {
     margin: auto;
 }
-=======
+
 body {
   background-size: cover;
   background-image: url("../assets/Dosen.png");
@@ -75,4 +75,4 @@ button {
 .forgot a {
   color: white;
 }
->>>>>>> 14ebe2e729867105929aec1bda06dbde5d05b750
+
