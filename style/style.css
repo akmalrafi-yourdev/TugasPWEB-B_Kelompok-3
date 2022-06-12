@@ -1,18 +1,17 @@
-<<<<<<< HEAD
-.nav-link:hover{
-    background-color: grey;
+.nav-link:hover {
+  background-color: grey;
 }
 
 .nav-item {
-    height: 5rem;
-    width: 5rem;
-    float: center;
+  height: 5rem;
+  width: 5rem;
+  float: center;
 }
 
 .nav-item img {
-    margin: auto;
+  margin: auto;
 }
-=======
+
 body {
   background-size: cover;
   background-image: url("../assets/Dosen.png");
@@ -75,4 +74,3 @@ button {
 .forgot a {
   color: white;
 }
->>>>>>> 14ebe2e729867105929aec1bda06dbde5d05b750
