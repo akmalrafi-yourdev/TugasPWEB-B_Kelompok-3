@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+
+.nav-link:hover{
+    background-color: grey;
+=======
 body {
   background-size: cover;
   min-height: 100vh;
   min-height: -webkit-fill-available;
+>>>>>>> cfb2c5e13338d0ba9a1154e80d15cc22f192ec6f
 }
 
 html {
@@ -13,9 +19,15 @@ html {
   border-color: #4b8d5b;
 }
 
+<<<<<<< HEAD
+body {
+  background-size: cover;
+  background-image: url("../assets/Dosen.png");
+=======
 .btn-primary:hover {
   background-color: #65d080;
   border-color: #56a169;
+>>>>>>> cfb2c5e13338d0ba9a1154e80d15cc22f192ec6f
 }
 
 .main-section {
@@ -78,6 +90,8 @@ button {
   color: white;
 }
 
+<<<<<<< HEAD
+=======
 /* Sidebar */
 
 main {
@@ -178,3 +192,4 @@ main {
 .lh-tight {
   line-height: 1.25;
 }
+>>>>>>> cfb2c5e13338d0ba9a1154e80d15cc22f192ec6f

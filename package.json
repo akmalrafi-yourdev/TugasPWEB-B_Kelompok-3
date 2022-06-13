@@ -1,10 +1,16 @@
 {
   "dependencies": {
+<<<<<<< HEAD
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.8",
+    "express": "^4.17.3",
+=======
     "bcrypt": "^5.0.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+>>>>>>> cfb2c5e13338d0ba9a1154e80d15cc22f192ec6f
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.16",
@@ -16,7 +22,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
+    "start": "node ./bin/www",
+=======
     "start": "nodemon ./src/server/server.js",
+>>>>>>> cfb2c5e13338d0ba9a1154e80d15cc22f192ec6f
     "dev": "nodemon ./bin/www"
   },
   "repository": {

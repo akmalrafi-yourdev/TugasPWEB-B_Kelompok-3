@@ -37,10 +37,15 @@
                 <input type="password" class="form-control w-100" placeholder="Password" name="password" />
               </div>
               <br />
+<<<<<<< HEAD
+              <button action='submit' onclick='startlog()' class="btn btn-primary">
+=======
               <button type="submit" class="btn btn-primary w-100 w-100">
+>>>>>>> cfb2c5e13338d0ba9a1154e80d15cc22f192ec6f
                 <i class="fas fa-sign-in-alt"></i>
                 <a class="text-white" href="rps-ampu-dosen.html">Login</a>
               </button>
+              <p id='akses'></p>
             </form>
             <div class="forgot">
               <a href="#">Forgot password?</a>
@@ -49,8 +54,19 @@
           </div>
         </div>
       </div>
-    </div>
-
+    </div> 
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      function startlog(){
+      var net1 = document.getElementById('user-group').value + document.getElementById('password-group').value;
+      var net2 = ('blanter') + ('123');
+      if (net1 == net2) {
+      var logakses = document.getElementById('akses').innerHTML = 'Login Successfully';
+      }
+      else {
+      var logakses = document.getElementById('akses').innerHTML = 'Login Failed';
+      }
+      };
+    </script>
   </body>
 </html>
