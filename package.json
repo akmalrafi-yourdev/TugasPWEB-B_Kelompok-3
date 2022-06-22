@@ -1,33 +1,38 @@
 {
+  "name": "loki_b3",
+  "version": "1.0.0",
+  "description": "Tugas Pemrograman Web B - Universitas Andalas",
+  "main": "index.js",
+  "type": "module",
   "dependencies": {
-<<<<<<< HEAD
-    "dotenv": "^16.0.0",
-    "ejs": "^3.1.8",
-    "express": "^4.17.3",
-=======
-    "bcrypt": "^5.0.1",
-    "cookie-parser": "^1.4.6",
+    "body-parser": "^1.20.0",
+    "cookie": "^0.4.1",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.1",
+    "depd": "^2.0.0",
+    "destroy": "^1.2.0",
+    "ee-first": "^1.1.1",
+    "encodeurl": "^1.0.2",
+    "escape-html": "^1.0.3",
+    "etag": "^1.8.1",
     "express": "^4.18.1",
->>>>>>> cfb2c5e13338d0ba9a1154e80d15cc22f192ec6f
-    "jsonwebtoken": "^8.5.1",
+    "finalhandler": "^1.2.0",
+    "fresh": "^0.5.2",
+    "http-errors": "^2.0.0",
+    "media-typer": "^0.3.0",
+    "ms": "^2.0.0",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.16",
-    "sequelize": "^6.20.1"
+    "on-finished": "^2.4.1",
+    "qs": "^6.10.3",
+    "raw-body": "^2.5.1",
+    "send": "^0.18.0",
+    "sequelize": "^6.21.0",
+    "serve-static": "^1.15.0",
+    "statuses": "^2.0.1"
   },
-  "name": "loki_b3",
-  "description": "Tugas Pemrograman Web B - Universitas Andalas",
-  "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
-    "start": "node ./bin/www",
-=======
-    "start": "nodemon ./src/server/server.js",
->>>>>>> cfb2c5e13338d0ba9a1154e80d15cc22f192ec6f
-    "dev": "nodemon ./bin/www"
+    "start": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
