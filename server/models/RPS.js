@@ -7,7 +7,7 @@ import db from "../config/database.js";
 const { DataTypes } = Sequelize;
  
 // Define schema
-const RPS = db.define('course_plans', {
+const rps = db.define('course_plans', {
   // Define attributes
   id: {
     type: DataTypes.BIGINT
@@ -63,4 +63,4 @@ const RPS = db.define('course_plans', {
   });
  
 // Export model Product
-export default RPS;
+export default rps;

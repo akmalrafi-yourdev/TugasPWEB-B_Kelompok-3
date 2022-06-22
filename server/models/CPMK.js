@@ -7,7 +7,7 @@ import db from "../config/database.js";
 const { DataTypes } = Sequelize;
  
 // Define schema
-const CPMK = db.define('course_los', {
+const cpmk = db.define('course_los', {
   // Define attributes
   id: {
     type: DataTypes.BIGINT
@@ -42,4 +42,4 @@ const CPMK = db.define('course_los', {
   });
  
 // Export model Product
-export default CPMK;
+export default cpmk;

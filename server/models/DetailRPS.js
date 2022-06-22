@@ -7,7 +7,7 @@ import db from "../config/database.js";
 const { DataTypes } = Sequelize;
  
 // Define schema
-const mingguan = db.define('course_plan_details', {
+const detailRPS = db.define('course_plan_details', {
   // Define attributes
   id: {
     type: DataTypes.BIGINT
@@ -42,4 +42,4 @@ const mingguan = db.define('course_plan_details', {
   });
  
 // Export model Product
-export default mingguan;
+export default detailRPS;
