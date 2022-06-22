@@ -28,11 +28,12 @@
     "send": "^0.18.0",
     "sequelize": "^6.21.0",
     "serve-static": "^1.15.0",
+    "side-channel": "^1.0.4",
     "statuses": "^2.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/index.js"
+    "start": "nodemon ./server/index.js"
   },
   "repository": {
     "type": "git",
