@@ -63,4 +63,4 @@ const RPS = db.define('course_plans', {
   });
  
 // Export model Product
-export default Product;
+export default RPS;
