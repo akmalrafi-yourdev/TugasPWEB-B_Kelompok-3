@@ -10,7 +10,9 @@ const { DataTypes } = Sequelize;
 const referensi = db.define('course_plan_references', {
   // Define attributes
   id: {
-    type: DataTypes.BIGINT
+    type: DataTypes.BIGINT,
+    autoIncrement: true,
+    primaryKey: true,
   },
   course_plan_id: {
     type: DataTypes.BIGINT

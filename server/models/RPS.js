@@ -10,7 +10,9 @@ const { DataTypes } = Sequelize;
 const rps = db.define('course_plans', {
   // Define attributes
   id: {
-    type: DataTypes.BIGINT
+    type: DataTypes.BIGINT,
+    autoIncrement: true,
+    primaryKey: true,
   },
   course_id: {
     type: DataTypes.BIGINT

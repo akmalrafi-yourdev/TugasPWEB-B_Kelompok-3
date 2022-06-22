@@ -10,7 +10,9 @@ const { DataTypes } = Sequelize;
 const cpmk = db.define('course_los', {
   // Define attributes
   id: {
-    type: DataTypes.BIGINT
+    type: DataTypes.BIGINT,
+    autoIncrement: true,
+    primaryKey: true,
   },
   course_plan_id: {
     type: DataTypes.BIGINT

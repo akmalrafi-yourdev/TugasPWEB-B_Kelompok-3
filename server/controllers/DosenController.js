@@ -1,10 +1,10 @@
 // Import model Product
-import Dosen from '../models/cpmk.js';
-import Dosen from '../models/DaftarReferensi.js';
-import Dosen from '../models/Kp-rps.js';
-import Dosen from '../models/rps.js';
-import Dosen from '../models/PertemuanMingguanRPS.js';
-import Dosen from '../models/DetailRPS.js';
+import cpmk from '../models/cpmk.js';
+import referensi from '../models/DaftarReferensi.js';
+import penilaian from '../models/Kp-rps.js';
+import rps from '../models/rps.js';
+import mingguan from '../models/PertemuanMingguanRPS.js';
+import detailRPS from '../models/DetailRPS.js';
 // Get RPS
 export const getRPS = async (req, res) => {
     try {

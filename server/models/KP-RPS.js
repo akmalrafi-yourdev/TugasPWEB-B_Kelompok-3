@@ -10,7 +10,9 @@ const { DataTypes } = Sequelize;
 const penilaian = db.define('course_plan_assessments', {
   // Define attributes
   id: {
-    type: DataTypes.BIGINT
+    type: DataTypes.BIGINT,
+    autoIncrement: true,
+    primaryKey: true,
   },
   course_plan_id: {
     type: DataTypes.BIGINT
