@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Tugas Pemrograman Web B - Universitas Andalas",
   "main": "index.js",
-  "type": "module",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "body-parser": "^1.20.0",
@@ -14,6 +13,7 @@
     "destroy": "^1.2.0",
     "dotenv": "^16.0.1",
     "ee-first": "^1.1.1",
+    "ejs": "^3.1.8",
     "encodeurl": "^1.0.2",
     "escape-html": "^1.0.3",
     "etag": "^1.8.1",
@@ -25,7 +25,6 @@
     "media-typer": "^0.3.0",
     "ms": "^2.0.0",
     "mysql2": "^2.3.3",
-    "nodemon": "^2.0.16",
     "on-finished": "^2.4.1",
     "qs": "^6.10.3",
     "raw-body": "^2.5.1",
@@ -36,8 +35,8 @@
     "statuses": "^2.0.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./server/index.js"
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -48,5 +47,8 @@
   "bugs": {
     "url": "https://github.com/akmalrafi-yourdev/loki_b3/issues"
   },
-  "homepage": "https://github.com/akmalrafi-yourdev/loki_b3#readme"
+  "homepage": "https://github.com/akmalrafi-yourdev/loki_b3#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
 }
