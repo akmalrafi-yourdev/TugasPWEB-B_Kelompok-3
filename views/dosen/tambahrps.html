@@ -1,438 +1,553 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Dashboard - SB Admin</title>
-        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet" />
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    </head>
-    <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
-            <!-- Sidebar Toggle-->
-            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-            <!-- Navbar Search-->
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-                </div>
-            </form>
-            <!-- Navbar-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
-                            </a>
-                            <div class="sb-sidenav-menu-heading">Interface</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Layouts
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Static Navigation</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
-                                </nav>
-                            </div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Pages
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Authentication
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="login.html">Login</a>
-                                            <a class="nav-link" href="register.html">Register</a>
-                                            <a class="nav-link" href="password.html">Forgot Password</a>
-                                        </nav>
-                                    </div>
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        Error
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="401.html">401 Page</a>
-                                            <a class="nav-link" href="404.html">404 Page</a>
-                                            <a class="nav-link" href="500.html">500 Page</a>
-                                        </nav>
-                                    </div>
-                                </nav>
-                            </div>
-                            <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="charts.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts
-                            </a>
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
-                            </a>
-                        </div>
-                    </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Start Bootstrap
-                    </div>
-                </nav>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Universitas Andalas</title>
+  <!-- plugins:css -->
+  <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="vendors/feather/feather.css" />
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" />
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css" />
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" />
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css" />
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-1" href="index.html"><img src="logo-unand.png" class="mr-2"
+            alt="logo" /></a>
+        <a class="navbar-brand brand-logo-mini mr-1" href="index.html"><img src="logo-mini.png" alt="logo" /></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown"></li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="default.png" alt="profile" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
             </div>
-            <div id="layoutSidenav_content">
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <div class="user-profile">
+          <div class="user-image">
+            <img src="default.png">
+          </div>
+          <div class="user-designation">
+            Login
+          </div>
+          <div class="user-name">
+            <span>DOSEN</span>
+          </div>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pengelolaan-rps.html">
+                <i class="icon-paper menu-icon"></i>
+                <span class="menu-title">Pengelolaan RPS</span>
+              </a>
+            </li>
+          </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <h3 class="font-weight-bold">Mata Kuliah Yang di Ampu</h3>
+                  <h6 class="font-weight-normal mb-0">List semua mata kuliah yang di ampu</h6>
+                </div>
+                <div class="col" style="position: relative; margin-bottom: 2%">
+                  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb float-sm-right">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Library</li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+              <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
-                        <h1 class="mt-4">Tambah RPS</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Tambahkan RPS</li>
-                        </ol>
-                        <!-- TAMBAHKAN KONTEN DISINI -->
-                        
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        Identitas Mata Kuliah
-                                    </div>
-                                    <form class="row g-3">
-                                        <div class="col-auto">
-                                          <label for="staticEmail2" class="visually-hidden">Program Studi</label>
-                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="   Program Studi">
-                                        </div>
-                                        <div class="col-lg-7">
-                                          <label for="inputPassword2" class="visually-hidden">Program Studi</label>
-                                          <input type="text" class="form-control" id="inputPassword2" placeholder="Program Studi">
-                                      </div>
-                                      <form class="row g-3">
-                                        <div class="col-auto">
-                                          <label for="staticEmail2" class="visually-hidden">Kode</label>
-                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="   Kode">
-                                        </div>
-                                        <div class="col-lg-7">
-                                          <label for="inputPassword2" class="visually-hidden">Kode</label>
-                                          <input type="text" class="form-control" id="inputPassword2" placeholder="Kode">
-                                      </div>
-                                    <form class="row g-3">
-                                        <div class="col-auto">
-                                          <label for="staticEmail2" class="visually-hidden">Mata Kuliah</label>
-                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="   Mata Kuliah">
-                                        </div>
-                                        <div class="col-lg-7">
-                                          <label for="inputPassword2" class="visually-hidden">Mata Kuliah</label>
-                                          <input type="text" class="form-control" id="inputPassword2" placeholder="Mata Kuliah">
-                                      </div>
-                                      <form class="row g-3">
-                                        <div class="col-auto">
-                                          <label for="staticEmail2" class="visually-hidden">Semester</label>
-                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="   Semester">
-                                        </div>
-                                        <div class="col-lg-7">
-                                          <label for="inputPassword2" class="visually-hidden">Semester</label>
-                                          <input type="text" class="form-control" id="inputPassword2" placeholder="Semester">
-                                      </div>
-                                      <form class="row g-3">
-                                        <div class="col-auto">
-                                          <label for="staticEmail2" class="visually-hidden">Deskripsi Mata Kuliah</label>
-                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="   Deskripsi Mata Kuliah">
-                                        </div>
-                                        <div class="col-lg-7">
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                      </div>
-                                      <form class="row g-3">
-                                        <div class="col-auto">
-                                          <label for="staticEmail2" class="visually-hidden">Pokok Bahasan</label>
-                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="   Pokok Bahasan">
-                                        </div>
-                                        <div class="col-lg-7">
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                      </div>
-                                      <form class="row g-3">
-                                        <div class="col-auto">
-                                          <label for="staticEmail2" class="visually-hidden">Mata Kuliah Syarat</label>
-                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="   Mata Kuliah Syarat">
-                                        </div>
-                                        <div class="col-lg-7">
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                      </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        Identitas dan Validasi
-                                    </div>
-                                    <div class="mb-3 row">
-                                        <form class="row g-3">
-                                            <div class="col-auto">
-                                              <label for="staticEmail2" class="visually-hidden">Dosen Pengembang</label>
-                                              <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value=" Dosen Pengembang RPS">
-                                            </div>
-                                            <div class="col-lg-7">
-                                              <label for="inputPassword2" class="visually-hidden">Dosen Pengembang</label>
-                                              <input type="text" class="form-control" id="inputPassword2" placeholder="Dosen Pengembang">
-                                          </div>
-                                          <form class="row g-3">
-                                            <div class="col-auto">
-                                              <label for="staticEmail2" class="visually-hidden">Koordinator Rumpun MK</label>
-                                              <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value=" Koordinator Rumpun MK">
-                                            </div>
-                                            <div class="col-lg-7">
-                                              <label for="inputPassword2" class="visually-hidden">Koordinator Rumpun MK</label>
-                                              <input type="text" class="form-control" id="inputPassword2" placeholder="Koordinator Rumpun MK">
-                                          </div>
-                                        <form class="row g-3">
-                                            <div class="col-auto">
-                                              <label for="staticEmail2" class="visually-hidden">Ka Program Studi</label>
-                                              <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value=" Ka Program Studi">
-                                            </div>
-                                            <div class="col-lg-7">
-                                              <label for="inputPassword2" class="visually-hidden">Ka Program Studi</label>
-                                              <input type="text" class="form-control" id="inputPassword2" placeholder="Mata Kuliah">
-                                          </div>
-                                          <form class="row g-3">
-                                            <div class="col-auto">
-                                              <label for="staticEmail2" class="visually-hidden">Tgl Penyusunan</label>
-                                              <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value=" Tgl Penyusunan">
-                                            </div>
-                                            <div class="col-lg-7">
-                                              <label for="inputPassword2" class="visually-hidden">Tgl Penyusunan</label>
-                                              <input type="text" class="form-control" id="inputPassword2" placeholder="Tgl Penyusunan">
-                                          </div>
+                  </ol>
 
-                                    </div>      
-                                    <div class="row">
-                           
-                                                        
-                        </div>
-                        
+                  <div class="d-grid gap-2 d-md-flex">
+                    <a class="btn btn-primary" href="tambahrps.html" role="button">+ Tambah RPS</a>
+                  </div><br>
+                  <!-- TAMBAHKAN KONTEN DISINI -->
 
-                    </div></div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    Pustaka
-                                </div>
-                                <div class="mb-3 row">
-                                    
-                                      
-                                    
-                                     
-                                      <form class="row g-3">
-                                        <div class="col-auto">
-                                          <label for="staticEmail2" class="visually-hidden">Utama </label>
-                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="   Utama :">
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                      </div>
-                                      <form class="row g-3">
-                                        <div class="col-auto">
-                                          <label for="staticEmail2" class="visually-hidden">Pendukung </label>
-                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="   Pendukung :">
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                      </div>
-                                </div>      
-                                <div class="row">
-                       
-                                                    
-                    </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    Media Pembelajaran
-                                </div>
-                                <div class="mb-3 row">
-                                    <form class="row g-3">
-                                        <div class="col-auto">
-                                          <label for="staticEmail2" class="visually-hidden">Perangkat Keras</label>
-                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="   Perangkat Keras">
-                                        </div>
-                                        <div class="col-lg-7">
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                      </div>
-                                      <form class="row g-3">
-                                        <div class="col-auto">
-                                          <label for="staticEmail2" class="visually-hidden">Perangkat Lunak</label>
-                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="   Perangkat Lunak">
-                                        </div>
-                                        <div class="col-lg-7">
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                      </div>
-                                </div>      
-                                <div class="row">
-                       
-                                                    
-                    </div>
-                    
-
-                </div></div>
-                <div class="card mb-4">
-                    <div class="card-header">
-                        <i class="fas fa-table me-1"></i>
-                        CP Program Studi
-                    </div>
+                  <div class="card mb-4">
                     <div class="card-body">
-                        <table id="datatablesSimple">
-                            <thead>
-                                <tr>
-                                    <th>Kode CP</th>
-                                    <th>Deskripsi Capaian Pembelajaran Program Studi</th>
-                                </tr>
-                            </thead>
-                            <tfoot>
-                                <tr>
-                                    <th>Kode CP</th>
-                                    <th>Deskripsi Capaian Pembelajaran Program Studi</th>
-                                </tr>
-                            </tfoot>
-                            <tbody>
-                                <tr>
-                                    <td>CP-1</td>
-                                    <td>System Architect</td>
-                                </tr>
-                                <tr>
-                                    <td>CP-2</td>
-                                    <td>Customer Support</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <button class="btn btn-success me-md-2" type="button">Tambah</button>
+                      <table>
+                        <div class="row  align-items-center">
+                          <div class="col-auto">
+
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
+                              value="   Program Studi">
                           </div>
+                          <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputPassword2">
+                          </div>
+                        </div>
+
+                        <div class="row  align-items-center">
+                          <div class="col-auto">
+
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
+                              value="   Kode">
+                          </div>
+                          <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputPassword2">
+                          </div>
+                        </div>
+
+                        <div class="row  align-items-center">
+                          <div class="col-auto">
+
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
+                              value="   Mata Kuliah">
+                          </div>
+                          <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputPassword2" >
+                          </div>
+                        </div>
+
+                        <div class="row  align-items-center">
+                          <div class="col-auto">
+
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
+                              value="   Semester">
+                          </div>
+                          <div class="col-lg-7">
+                            <input type="text" class="form-control" id="inputPassword2" >
+                          </div>
+                        </div>
+
+                        <div class="row  align-items-center">
+                          <div class="col-auto">
+
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
+                              value="   Deskripsi Mata Kuliah">
+                          </div>
+                          <div class="col-lg-7">
+
+                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                              rows="3"></textarea>
+                          </div>
+                        </div>
+
+                        <div class="row  align-items-center">
+                          <div class="col-auto">
+
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
+                              value="   Pokok Bahasan">
+                          </div>
+                          <div class="col-lg-7">
+                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                              rows="3"></textarea>
+                          </div>
+                        </div>
+
+                        <div class="row  align-items-center">
+                          <div class="col-auto">
+
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
+                              value="   Mata Kuliah syarat">
+                          </div>
+                          <div class="col-lg-7">
+                            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                              <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Cari mata kuliah"
+                                  aria-label="Cari mata kuliah" aria-describedby="btnNavbarSearch" />
+                                <button class="btn btn-light" id="btnNavbarSearch" type="button"><i
+                                    class="fas fa-search"></i></button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
                     </div>
-                </div>
+                  </div>
+                  </table>
+              </div>
             </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                CPMK
-                            </div>
-                            <div class="mb-3 row">
-                                
-                                  
-                                
-                                 
-                                  <form class="row g-3">
-                                    <div class="col-auto">
-                                      <label for="staticEmail2" class="visually-hidden">Deskripsi </label>
-                                      <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="   Deskripsi :">
-                                    </div>
-                                    <div><table class="table">
-                                        <thead>
-                                          <tr>
-                                            <th scope="col">No</th>
-                                            <th scope="col">Deskripsi Capaian Pembelajaran Mata Kuliah</th>
-                                            <th scope="col">CP Program Studi Terkait</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
-                                            <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td><div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                                <label class="form-check-label" for="inlineCheckbox1">1</label>
-                                              </div>
-                                              <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                                                <label class="form-check-label" for="inlineCheckbox2">2</label>
-                                              </div></td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
-                                            <td><div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                                <label class="form-check-label" for="inlineCheckbox1">1</label>
-                                              </div>
-                                              <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                                                <label class="form-check-label" for="inlineCheckbox2">2</label>
-                                              </div></td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">2</th>
-                                            <td>Larry the Bird</td>
-                                            <td><div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                                <label class="form-check-label" for="inlineCheckbox1">1</label>
-                                              </div>
-                                              <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                                                <label class="form-check-label" for="inlineCheckbox2">2</label>
-                                              </div></td>
-                                          </tr>
-                                        </tbody>
-                                      </table><div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                        <button class="btn btn-success me-md-2" type="button">Tambah</button>
-                                      </div></div>
-                            </div>      
-                            <div class="row">
-                   
-                                                
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="card mb-4">
+            <div class="card-body">
+              <table>
+                <div class="row  align-items-center">
+                  <div class="col-auto">
+
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
+                      value="   Dosen Pengembang">
+                  </div>
+                  <div class="col-lg-7">
+                    <input type="text" class="form-control" id="inputPassword2">
+                  </div>
                 </div>
-                        </div>
-                    </div>
-                    <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="button">Tambahkan RPS</button>
-                      </div>
-                            
-                         
-                </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2022</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+
+                <div class="row  align-items-center">
+                  <div class="col-auto">
+
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
+                      value="   Koordinator Rumpun MK">
+                  </div>
+                  <div class="col-lg-7">
+                    <input type="text" class="form-control" id="inputPassword2" >
+                  </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
+                      value="   Ka Program Studi">
+                  </div>
+                  <div class="col-lg-7">
+                    <input type="text" class="form-control" id="inputPassword2" >
+                  </div>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                  <div class="col-auto">
+
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
+                      value="   Tgl Penyusunan">
+                  </div>
+                  <div class="col-lg-7">
+                    <input type="text" class="form-control" id="inputPassword2">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+    </table>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="card mb-4">
+  <div class="card-body">
+    <table>
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
+            value="   Utama :">
+        </div>
+        <div class="col-lg-7">
+          <textarea class="form-control" id="exampleFormControlTextarea1"
+                          rows="3"></textarea>
+        </div>
+      </div>
+
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
+            value="   Pendukung :">
+        </div>
+        <div class="col-lg-7">
+          <textarea class="form-control" id="exampleFormControlTextarea1"
+                            rows="3"></textarea>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+</div>
+</table>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card mb-3">
+  <div class="card-body">
+    <table>
+      <div class="row  align-items-center">
+        <div class="col-auto">
+
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
+                          value="   Perangkat Keras">
+        </div>
+        <div class="col-lg-7">
+          <textarea class="form-control" id="exampleFormControlTextarea1"
+                          rows="3"></textarea>
+        </div>
+      </div>
+
+      <div class="row  align-items-center">
+        <div class="col-auto">
+
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
+                            value="   Perangkat Lunak">
+        </div>
+        <div class="col-lg-7">
+          <textarea class="form-control" id="exampleFormControlTextarea1"
+                            rows="3"></textarea>
+        </div>
+      </div>
+      </div>
+  </div>
+</div>
+</table>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card mb-3">
+  <div class="card-body">
+    <table>
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Project</label>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+              <input type="text" class="form-control" id="inputPassword2" value="">
+              <button class="btn btn-light" id="btnNavbarSearch" type="button"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-percent" viewBox="0 0 16 16">
+                  <path
+                    d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                </svg></button>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="assets/demo/chart-area-demo.js"></script>
-        <script src="assets/demo/chart-bar-demo.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
-    </body>
+        </form>
+      </div>
+
+
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Tugas</label>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+              <input type="text" class="form-control" id="inputPassword2" value=""><button
+                class="btn btn-light" id="btnNavbarSearch" type="button"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-percent" viewBox="0 0 16 16">
+                  <path
+                    d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                </svg></button>
+            </div>
+        </div>
+        </form>
+      </div>
+
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Quiz</label>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+              <input type="text" class="form-control" id="inputPassword2" value=""> <button
+                class="btn btn-light" id="btnNavbarSearch" type="button"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-percent" viewBox="0 0 16 16">
+                  <path
+                    d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                </svg></button>
+            </div>
+        </div>
+        </form>
+      </div>
+
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">UTS</label>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+              <input type="text" class="form-control" id="inputPassword2" value=""> <button
+                class="btn btn-light" id="btnNavbarSearch" type="button"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-percent" viewBox="0 0 16 16">
+                  <path
+                    d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                </svg></button>
+            </div>
+        </div>
+        </form>
+      </div>
+
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">UAS</label>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+              <input type="text" class="form-control" id="inputPassword2" value=""> <button
+                class="btn btn-light" id="btnNavbarSearch" type="button"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-percent" viewBox="0 0 16 16">
+                  <path
+                    d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                </svg></button>
+            </div>
+        </div>
+        </form>
+      </div>
+</table>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+      </main>
+    </div>
+  </div>
+  <!-- content-wrapper ends -->
+  <!-- partial:partials/_footer.html -->
+  
+  <!-- partial -->
+  </div>
+  <!-- main-panel ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+  <script src="js/datatables-simple-demo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
