@@ -1,11 +1,15 @@
 import express from "express";
 import { createCPMK, createKomponen, createPertemuan, createReferensi, createRPS, deleteCPMK, deleteKomponen, deletePertemuan, deleteReferensi, getCPMK, getDetailRPS, getKomponen, getPertemuan, getReferensi, getRPS, updateCPMK, updateKomponen, updatePertemuan, updateReferensi, updateRPS } from "../controllers/DosenController.js";
-import { getUser } from "../controllers/UserController.js";
+import { getMatkul, getUser, matkulDetail, searchMatkul } from "../controllers/UserController.js";
+import detailRPS from "../models/DetailRPS.js";
 
 const router = express.Router();
 
 router.get('/users', getUser)
-//routing buat dosen
+
+
+//Dosen/Lecturer Routing
+
 router.get('/rps', getRPS)
 router.get('/detail-rps', getDetailRPS)
 router.post('/rps', createRPS)
@@ -27,6 +31,12 @@ router.post('/pertemuan', createPertemuan)
 router.put('/pertemuan', updatePertemuan)
 router.delete('/pertemuan', deletePertemuan)
 
+
+// USER/MAHASISWA ROUTES
+
+router.get('/user/matakuliah', getMatkul)
+router.get('/user/matakuliah/:search', searchMatkul)
+router.get('/user/matakuliah/rps/:id', matkulDetail)
 
 
 
