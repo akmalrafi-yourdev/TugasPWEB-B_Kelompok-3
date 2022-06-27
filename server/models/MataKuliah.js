@@ -1,7 +1,7 @@
-import { Sequelize } from "sequelize";
+const Sequelize = require('sequelize');
 
-import db from "../config/database.js";
-import rps from "../models/RPS.js";
+const db = require('../config/database.js');
+const rps = require('../models/RPS.js');
 
 const { DataTypes } = Sequelize;
 
@@ -52,4 +52,4 @@ MataKuliah.hasMany(rps, {
   foreignKey: "course_id",
 });
 
-export default MataKuliah;
+module.exports = MataKuliah;

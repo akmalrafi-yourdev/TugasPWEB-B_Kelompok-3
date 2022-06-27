@@ -1,8 +1,8 @@
 // import sequelize
-import { Sequelize } from "sequelize";
-// import connection
-import db from "../config/database.js";
-import detailRPS from "../models/DetailRPS.js";
+const Sequelize = require('sequelize');
+
+const db = require('../config/database.js');
+// import detailRPS from "../models/DetailRPS.js";
 
 // init DataTypes
 const { DataTypes } = Sequelize;
@@ -71,4 +71,4 @@ const rps = db.define(
 // rps.hasMany(detailRPS, { foreignKey: "course_plan_id" });
 
 // Export model Product
-export default rps;
+module.exports = rps;

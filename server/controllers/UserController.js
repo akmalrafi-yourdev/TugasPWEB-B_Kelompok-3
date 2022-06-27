@@ -1,10 +1,10 @@
-import User from "../models/User.js";
-import MataKuliah from "../models/MataKuliah.js";
-import {detailRPS, rps} from "../models/IndexRPS.js";
+const User = require("../models/User");
+const MataKuliah = require("../models/MataKuliah");
+const IndexRPS = require("../models/IndexRPS");
 
-import { Op } from "sequelize";
+const Sequelize = require("sequelize");
 
-export const getUser = async (req, res) => {
+const getUser = async (req, res) => {
   try {
     const user = await User.findAll();
     res.send(user);
@@ -13,8 +13,9 @@ export const getUser = async (req, res) => {
   }
 };
 
-export const getMatkul = async (req, res) => {
+const getMatkul = async (req, res) => {
   try {
+    console.log("jalan")
     const mataKuliah = await MataKuliah.findAll();
     res.send(mataKuliah);
   } catch (err) {
@@ -22,13 +23,13 @@ export const getMatkul = async (req, res) => {
   }
 };
 
-export const searchMatkul = async (req, res) => {
+const searchMatkul = async (req, res) => {
   var searchByName, searchByCode;
   try {
     searchByCode = await MataKuliah.findAll({
       where: {
         code: {
-          [Op.like]: `%${req.params.search}%`,
+          [Sequelize.Op.like]: `%${req.params.search}%`,
         },
       },
     });
@@ -37,16 +38,15 @@ export const searchMatkul = async (req, res) => {
       searchByName = await MataKuliah.findAll({
         where: {
           name: {
-            [Op.like]: `%${req.params.search}%`,
+            [Sequelize.Op.like]: `%${req.params.search}%`,
           },
         },
       });
       res.send(searchByName);
-    } else if(searchByCode.length > 0) {
+    } else if (searchByCode.length > 0) {
       res.send(searchByCode);
     }
     // WIP: Return if json object == 0
-
   } catch (err) {
     res.json({
       message: "something wrong..",
@@ -55,11 +55,13 @@ export const searchMatkul = async (req, res) => {
   }
 };
 
-export const matkulDetail = async (req, res) => {
+const matkulDetail = async (req, res) => {
   try {
-    const getRps = await rps.findAll();
+    const getRps = await IndexRPS.rps.findAll();
     res.send(getRps);
   } catch (err) {
     console.log(err);
   }
 };
+
+module.exports = { matkulDetail, getMatkul, getUser, searchMatkul };
