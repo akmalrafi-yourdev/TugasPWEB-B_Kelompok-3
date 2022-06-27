@@ -19,7 +19,7 @@ const rps = db.define(
       primaryKey: true,
     },
     course_id: {
-      type: DataTypes.BIGINT,
+      type: DataTypes.INTEGER,
     },
     rev: {
       type: DataTypes.INTEGER,

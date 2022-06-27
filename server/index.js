@@ -16,6 +16,8 @@ try {
 
 app.use(Router);
 
-app.listen(5000, () =>
-  console.log("Server dah nyala sluuurrr... Portnya: 5000")
+const port = 5500
+
+app.listen(port, () =>
+  console.log(`Server dah nyala sluuurrr... Portnya: ${port}`)
 );
