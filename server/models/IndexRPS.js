@@ -1,15 +1,17 @@
-// import sequelize
-import { Sequelize } from "sequelize";
-// import connection
-import db from "../config/database.js";
+const Sequelize = require("sequelize");
+const db = require("../config/database");
 
-import rps from "../models/RPS.js";
-import detailRPS from "../models/DetailRPS.js";
-import MataKuliah from "../models/MataKuliah.js";
+const rps = require("../models/RPS");
+const detailRPS = require("../models/DetailRPS");
+const mataKuliah = require("../models/MataKuliah");
+
+// import rps from "../models/RPS.js";
+// import detailRPS from "../models/DetailRPS.js";
+// import MataKuliah from "../models/MataKuliah.js";
 
 rps.hasMany(detailRPS, { foreignKey: "course_plan_id" });
 
-rps.belongsTo(MataKuliah, { foreignKey: "id" });
+rps.belongsTo(mataKuliah, { foreignKey: "id" });
 detailRPS.belongsTo(rps, { foreignKey: "id" });
 
-export { rps, detailRPS };
+module.exports = { rps, detailRPS };
