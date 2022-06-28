@@ -1,27 +1,19 @@
-// import sequelize
 const Sequelize = require('sequelize');
 
 const db = require('../config/database.js');
-// import detailRPS from "../models/DetailRPS.js";
+const rps = require('../models/RPS.js');
 
-// init DataTypes
 const { DataTypes } = Sequelize;
 
-// Define schema
-const rps = db.define(
-  "course_plans",
+const MataKuliah = db.define(
+  "courses",
   {
-    // Define attributes
-
     id: {
-      type: DataTypes.BIGINT,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
     },
-    course_id: {
-      type: DataTypes.INTEGER,
-    },
-    rev: {
+    curriculum_id: {
       type: DataTypes.INTEGER,
     },
     code: {
@@ -37,22 +29,10 @@ const rps = db.define(
       type: DataTypes.INTEGER,
     },
     semester: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.TEXT,
     },
     description: {
       type: DataTypes.TEXT,
-    },
-    material: {
-      type: DataTypes.TEXT,
-    },
-    created_by: {
-      type: DataTypes.BIGINT,
-    },
-    validated_by: {
-      type: DataTypes.BIGINT,
-    },
-    validated_at: {
-      type: DataTypes.DATE,
     },
     created_at: {
       type: DataTypes.DATE,
@@ -64,11 +44,12 @@ const rps = db.define(
   {
     createdAt: "created_at",
     updatedAt: "updated_at",
-    freezeTableName: true,
+    freezeTableName: false,
   }
 );
 
-// rps.hasMany(detailRPS, { foreignKey: "course_plan_id" });
+MataKuliah.hasMany(rps, {
+  foreignKey: "course_id",
+});
 
-// Export model Product
-module.exports = rps;
+module.exports = MataKuliah;

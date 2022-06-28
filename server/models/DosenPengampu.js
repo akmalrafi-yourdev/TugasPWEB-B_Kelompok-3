@@ -2,39 +2,32 @@ const Sequelize = require('sequelize');
 const db = require('../config/database');
 // import rps from "../models/RPS.js";
 
-// init DataTypes
 const { DataTypes } = Sequelize;
 
-// Define schema
-const detailRPS = db.define(
-  "course_plan_details",
+const DosenPengampu = db.define(
+  "course_plan_lecturers",
   {
-    // Define attributes
     id: {
-      type: DataTypes.BIGINT,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
     },
     course_plan_id: {
       type: DataTypes.BIGINT,
     },
-    week: {
+    lecturer_id: {
+      type: DataTypes.BIGINT,
+    },
+    creator: {
       type: DataTypes.INTEGER,
-    },
-    material: {
-      type: DataTypes.TEXT,
-    },
-    method: {
-      type: DataTypes.TEXT,
-    },
-    student_experience: {
-      type: DataTypes.TEXT,
     },
     created_at: {
       type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW
     },
     updated_at: {
       type: DataTypes.DATE,
+      // defaultValue: DataTypes.DATE
     },
   },
   {
@@ -44,9 +37,4 @@ const detailRPS = db.define(
   }
 );
 
-// detailRPS.belongsTo(rps, {
-//   foreignKey: 'id'
-// });
-
-// Export model Product
-module.exports = detailRPS;
+module.exports = DosenPengampu;

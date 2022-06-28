@@ -35,7 +35,7 @@
     "statuses": "^2.0.1"
   },
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon server/index.js && app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

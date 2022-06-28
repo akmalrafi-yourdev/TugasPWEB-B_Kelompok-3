@@ -1,12 +1,14 @@
 // Import model Product
-import cpmk from '../models/cpmk.js';
-import referensi from '../models/DaftarReferensi.js';
-import penilaian from '../models/Kp-rps.js';
-import rps from '../models/rps.js';
-import mingguan from '../models/PertemuanMingguanRPS.js';
-import detailRPS from '../models/DetailRPS.js';
+//const User = require('../models/User');
+const cpmk = require('../models/cpmk.js');
+const referensi = require('../models/DaftarReferensi.js');
+const penilaian = require('../models/Kp-rps.js');
+const rps = require('../models/rps.js');
+const mingguan = require('../models/PertemuanMingguanRPS.js');
+const detailRPS = require('../models/DetailRPS.js');
+
 // Get RPS
-export const getRPS = async (req, res) => {
+const getRPS = async (req, res) => {
     try {
         const dataRPS = await rps.findAll();
         res.send(dataRPS);
@@ -15,7 +17,7 @@ export const getRPS = async (req, res) => {
     }
 }
 // Get detail RPS
-export const getDetailRPS = async (req, res) => {
+const getDetailRPS = async (req, res) => {
     try {
         const dataDetailRPS = await DetailRPS.findAll();
         res.send(dataDetailRPS);
@@ -24,7 +26,7 @@ export const getDetailRPS = async (req, res) => {
     }
 }
 // Create RPS baru
-export const createRPS = async (req, res) => {
+const createRPS = async (req, res) => {
     try {
         await rps.create(req.body);
         res.json({
@@ -35,7 +37,7 @@ export const createRPS = async (req, res) => {
     }
 }
 // Update RPS
-export const updateRPS = async (req, res) => {
+const updateRPS = async (req, res) => {
     try {
         await rps.update(req.body, {
             where: {
@@ -51,7 +53,7 @@ export const updateRPS = async (req, res) => {
 }
  
 // Get List  CPMK
-export const getCPMK = async (req, res) => {
+const getCPMK = async (req, res) => {
     try {
         const listCPMK = await cpmk.findAll();
         res.send(listCPMK);
@@ -61,7 +63,7 @@ export const getCPMK = async (req, res) => {
 }
 
 // Create List CPMK
-export const createCPMK = async (req, res) => {
+const createCPMK = async (req, res) => {
     try {
         await cpmk.create(req.body);
         res.json({
@@ -73,7 +75,7 @@ export const createCPMK = async (req, res) => {
 }
 
 // Update List CPMK
-export const updateCPMK = async (req, res) => {
+const updateCPMK = async (req, res) => {
     try {
         await cpmk.update(req.body, {
             where: {
@@ -89,7 +91,7 @@ export const updateCPMK = async (req, res) => {
 }
 
 // Delete CPMK berdasarkan id
-export const deleteCPMK = async (req, res) => {
+const deleteCPMK = async (req, res) => {
     try {
         await cpmk.destroy({
             where: {
@@ -104,7 +106,7 @@ export const deleteCPMK = async (req, res) => {
     }
 }
 // Get List  referensi
-export const getReferensi = async (req, res) => {
+const getReferensi = async (req, res) => {
     try {
         const listReferensi = await DaftarReferensi.findAll();
         res.send(listReferensi);
@@ -114,7 +116,7 @@ export const getReferensi = async (req, res) => {
 }
 
 // Create List referensi
-export const createReferensi = async (req, res) => {
+const createReferensi = async (req, res) => {
     try {
         await DaftarReferensi.create(req.body);
         res.json({
@@ -126,7 +128,7 @@ export const createReferensi = async (req, res) => {
 }
 
 // Update List referensi
-export const updateReferensi = async (req, res) => {
+const updateReferensi = async (req, res) => {
     try {
         await DaftarReferensi.update(req.body, {
             where: {
@@ -142,7 +144,7 @@ export const updateReferensi = async (req, res) => {
 }
 
 // Delete list referensi berdasarkan id
-export const deleteReferensi = async (req, res) => {
+const deleteReferensi = async (req, res) => {
     try {
         await DaftarReferensi.destroy({
             where: {
@@ -157,7 +159,7 @@ export const deleteReferensi = async (req, res) => {
     }
 }
 // Get komponen penilaian
-export const getKomponen = async (req, res) => {
+const getKomponen = async (req, res) => {
     try {
         const komponen = await Kp-rps.findAll();
         res.send(komponen);
@@ -167,7 +169,7 @@ export const getKomponen = async (req, res) => {
 }
 
 // Create komponen penilaian
-export const createKomponen = async (req, res) => {
+const createKomponen = async (req, res) => {
     try {
         await Kp-rps.create(req.body);
         res.json({
@@ -179,7 +181,7 @@ export const createKomponen = async (req, res) => {
 }
 
 // Update komponen penilaian
-export const updateKomponen = async (req, res) => {
+const updateKomponen = async (req, res) => {
     try {
         await Kp-rps.update(req.body, {
             where: {
@@ -195,7 +197,7 @@ export const updateKomponen = async (req, res) => {
 }
 
 // Delete komponen penilaian berdasarkan id
-export const deleteKomponen = async (req, res) => {
+const deleteKomponen = async (req, res) => {
     try {
         await Kp-rps.destroy({
             where: {
@@ -210,7 +212,7 @@ export const deleteKomponen = async (req, res) => {
     }
 }
 // Get Pertemuan Mingguan RPS
-export const getPertemuan = async (req, res) => {
+const getPertemuan = async (req, res) => {
     try {
         const pertemuan = await PertemuanMingguanRPS.findAll();
         res.send(pertemuan);
@@ -220,7 +222,7 @@ export const getPertemuan = async (req, res) => {
 }
 
 // Create Pertemuan Mingguan RPS
-export const createPertemuan = async (req, res) => {
+const createPertemuan = async (req, res) => {
     try {
         await PertemuanMingguanRPS.create(req.body);
         res.json({
@@ -232,7 +234,7 @@ export const createPertemuan = async (req, res) => {
 }
 
 // Update Pertemuan Mingguan RPS
-export const updatePertemuan = async (req, res) => {
+const updatePertemuan = async (req, res) => {
     try {
         await PertemuanMingguanRPS.update(req.body, {
             where: {
@@ -248,7 +250,7 @@ export const updatePertemuan = async (req, res) => {
 }
 
 // Delete Pertemuan Mingguan RPS berdasarkan id
-export const deletePertemuan = async (req, res) => {
+const deletePertemuan = async (req, res) => {
     try {
         await PertemuanMingguanRPS.destroy({
             where: {
@@ -263,13 +265,13 @@ export const deletePertemuan = async (req, res) => {
     }
 }
 
-
+module.exports={getRPS, getDetailRPS, createRPS, updateRPS, getCPMK, createCPMK, updateCPMK, deleteCPMK, getReferensi, createReferensi, updateReferensi, deleteReferensi, getKomponen, createKomponen, updateKomponen, deleteKomponen, getPertemuan, createPertemuan, updatePertemuan, deletePertemuan}
 
 
 
 
 // // Get  berdasarkan id
-// export const getProductById = async (req, res) => {
+// const getProductById = async (req, res) => {
 //     try {
 //         const product = await Product.findAll({
 //             where: {
@@ -283,7 +285,7 @@ export const deletePertemuan = async (req, res) => {
 // }
  
 // // Create product baru
-// export const createProduct = async (req, res) => {
+// const createProduct = async (req, res) => {
 //     try {
 //         await Product.create(req.body);
 //         res.json({
@@ -295,7 +297,7 @@ export const deletePertemuan = async (req, res) => {
 // }
  
 // // Update product berdasarkan id
-// export const updateProduct = async (req, res) => {
+// const updateProduct = async (req, res) => {
 //     try {
 //         await Product.update(req.body, {
 //             where: {
@@ -311,7 +313,7 @@ export const deletePertemuan = async (req, res) => {
 // }
  
 // // Delete product berdasarkan id
-// export const deleteProduct = async (req, res) => {
+// const deleteProduct = async (req, res) => {
 //     try {
 //         await Product.destroy({
 //             where: {
