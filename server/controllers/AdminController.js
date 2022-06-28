@@ -7,13 +7,7 @@ const Sequelize = require("sequelize");
 
 const inputCoursePlanLecturers = async (req, res) => {
   try {
-    // const data = await DosenPengampu.create({
-    //     course_plan_id: req.params.course_plan_id,
-    //     lecturer_id: req.params.lecturer_id,
-    //     creator: req.params.creator,
-    //     // created_at: Sequelize.DataTypes.DATE
-    // })
-    const data = await DosenPengampu.create(req.body);
+    await DosenPengampu.create(req.body);
     res.json({
       message: "data berhasil diinput! :D",
     });
@@ -33,4 +27,19 @@ const createMatkul = async (req, res) => {
   }
 }
 
-module.exports = { inputCoursePlanLecturers, createMatkul };
+const updateCoursePlanLecturers = async (req, res) => {
+  try {
+    await DosenPengampu.update(req.body, {
+      where: {
+        id: req.params.id,
+      }
+    });
+    res.json({
+      message: "data berhasil diupdate! :D",
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+module.exports = { inputCoursePlanLecturers, updateCoursePlanLecturers };
