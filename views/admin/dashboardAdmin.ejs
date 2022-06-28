@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -107,13 +108,14 @@
 
                        </div>
 
-                       <div class="dropdown">
+                       <!-- <div class="dropdown">
                         <div class="dropdown" style="margin-bottom: 2%;">
                           <button  class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             + Pilih Semester
                           </button>              
+                          
                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">Semester 1</a></li>
+                            <li><a class="dropdown-item" href="#" value="" >Semester 1</a></li>
                             <li><a class="dropdown-item" href="#">Semester 2</a></li>
                             <li><a class="dropdown-item" href="#">Semester 3</a></li>                       
                             <li><a class="dropdown-item" href="#">Semester 4</a></li>
@@ -121,22 +123,54 @@
                             <li><a class="dropdown-item" href="#">Semester 6</a></li>
   
                           </ul>
-                      </div>
+                      </div></div> -->
                      <!-- TAMBAHKAN KONTEN DISINI -->
          
                      <div class="card mb-4">
                        <div class="card-body">
                                 <table id="datatablesSimple">
-                                    <thead>
+                                    <thead >
                                         <tr>
-                                            <th>Daftar Mata Kuliah</th>
+                                            <th>ID</th>
                                             <th>Kode Mata Kuliah</th>
+                                            <th>Nama Mata Kuliah</th>
+                                            <th>Nama Alias</th>
                                             <th>SKS</th>
-                                            <th>Jumlah Revisi</th>
+                                            <th>Semester</th>
+                                            <th>Deskripsi</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
+                                    <%
+        if(rows.length!=0){
+        var i=1;
+        rows.forEach(function(data){
+        %>
+        <tr>
+            <td><%=data.id; %></td>
+            <td><%=data.code %></td>
+            <td><%=data.name %></td>
+            <td><%=data.alias_name %></td>
+            <td><%=data.credit %></td>
+            <td><%=data.semester %></td>
+            <td><%=data.description %></td>
+            <!-- <td class="btn btn-warning" ><a href="/users/edit/<%=data.id%>">Edit</a></td>
+            <td class="btn btn-danger" ><a href="/users/delete/<%=data.id%>">Delete</a></td> -->
+            <td>
+              <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example" >
+                <a class="btn btn-success" href="<%= link%>" role="button" style="background-color:#533E85; border-color: #533E85;">Kelola Dosen</a>
+                <a class="btn btn-primary" href="<%= link1%>" role="button" style="background-color:#488FB1; border-color: #488FB1;">Peta CPM/CPMK</a>
+                <a class="btn btn-primary" href="<%= link2%>" role="button" style="background-color:#4FD3C4; border-color: #4FD3C4;">Persentase Project</a>
+              </div>
+              </td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+                                    <!-- <tfoot>
                                         <tr>
                                             <th>Name</th>
                                             <th>Position</th>
@@ -145,7 +179,7 @@
                                     </tfoot>
                                     <tbody>
                                         <tr>
-                                            <td>Analisis dan Visualisasi Data</td>
+                                            <td> <%-rows[0].name %> </td>
                                             <td>JSI621</td>
                                             <td>3</td>
                                             <td>00</td>
@@ -310,7 +344,7 @@
                                   
                                             </div>
                                               </td>                                        
-                                        </tr>
+                                        </tr> -->
                                     </tbody>
                                 </table>
                        </div>
