@@ -21,5 +21,16 @@ const inputCoursePlanLecturers = async (req, res) => {
     console.log(error);
   }
 };
+// Create Matkul
+const createMatkul = async (req, res) => {
+  try {
+      await MataKuliah.create(req.body);
+      res.json({
+          "message": "MatKul Created"
+      });
+  } catch (err) {
+      console.log(err);
+  }
+}
 
-module.exports = { inputCoursePlanLecturers };
+module.exports = { inputCoursePlanLecturers, createMatkul };
