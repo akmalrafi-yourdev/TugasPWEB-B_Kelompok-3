@@ -15,7 +15,7 @@ router.post("/admin/inputDosen/", AdminController.inputCoursePlanLecturers);
 router.get('/dosen/rps', DosenController.getRPS)
 router.get('/dosen/detail-rps', DosenController.getDetailRPS)
 router.post('/dosen/rps', DosenController.createRPS)
-rDouter.put('/dosen/rps/:id', DosenController.updateRPS)
+router.put('/dosen/rps/:id', DosenController.updateRPS)
 router.get('/dosen/cpmk', DosenController.getCPMK)
 router.post('/dosen/cpmk', DosenController.createCPMK)
 router.put('/dosen/cpmk', DosenController.updateCPMK)

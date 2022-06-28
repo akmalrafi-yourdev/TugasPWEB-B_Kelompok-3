@@ -1,7 +1,7 @@
 // import sequelize 
-import { Sequelize } from "sequelize";
+const Sequelize = require ("sequelize");
 // import connection 
-import db from "../config/database.js";
+const db =  require("../config/database.js");
  
 // init DataTypes
 const { DataTypes } = Sequelize;
@@ -41,4 +41,4 @@ const penilaian = db.define('course_plan_assessments', {
   });
  
 // Export model Product
-export default penilaian;
+module.export = penilaian;
