@@ -8,7 +8,8 @@ const DosenController = require("../controllers/DosenController.js")
 const router = express.Router();
 
 // Admin Routing
-router.post("/admin/inputDosen/", AdminController.inputCoursePlanLecturers);
+router.post("/admin/inputDosenPengampu/", AdminController.inputCoursePlanLecturers);
+router.put("/admin/updateDosenPengampu/:id", AdminController.updateCoursePlanLecturers);
 
 //Dosen/Lecturer Routing
 
