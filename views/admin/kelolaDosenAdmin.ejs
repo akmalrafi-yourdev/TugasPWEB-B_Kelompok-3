@@ -150,43 +150,36 @@
                                             </td>
                                         </tr>
 
+
+                                        <%
+                                        if(rows.length!=0){
+                                        var i=1;
+                                        rows.forEach(function(data){
+                                        %>
                                         <tr>
-                                          <td>Husnil Kamil, M.T</td>
+                                            <td><%=data.id; %></td>
+                                        <tr>
                                           <td>
                                           <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                             <div class="dropdown">
 
                                               <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                                 <a button type="button" class="btn btn-primary" href="ubahrps.html" role="button">Hapus</a>                                                                    
-                                            </div>                                         
-                                           
+                                            </div>                                                                                    
                                           </div>
                                           </td>
                                       </tr>
+                                      <%  i++; }) %>
+                                      <% } else{ %>
+                                          <tr>
+                                              <td colspan="7">No Data Found</td>
+                                          </tr>
+                                      <% } %>
 
-                                      <tr>
-                                        <td>Hasdi Putra, M.T</td>
-                                        <td>
-                                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                                <a button type="button" class="btn btn-primary" href="ubahrps.html" role="button">Hapus</a>                                                                    
-                                            </div>                                            
-                                         
-                                        </div>
-                                        </td>
-                                    </tr>
 
-                                      <tr>
-                                        <td>Adi Arga Arifnur, M.Kom</td>
-                                        <td>
-                                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                                <a button type="button" class="btn btn-primary" href="ubahrps.html" role="button">Hapus</a>                                                                    
-                                            </div>                                            
-                                         
-                                        </div>
-                                        </td>
-                                    </tr>
+                                          <!-- <td class="btn btn-warning" ><a href="/users/edit/<%=data.id%>">Edit</a></td>
+                                          <td class="btn btn-danger" ><a href="/users/delete/<%=data.id%>">Delete</a></td> -->
+
                                     </tbody>
                                 </table>
                        </div>
