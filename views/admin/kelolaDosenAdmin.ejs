@@ -27,8 +27,8 @@
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo mr-1" href="dashboardAdmin.html"><img src="logo-unand.png" class="mr-2" alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini mr-1" href="dashboardAdmin.html"><img src="logo-mini.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo mr-1" href="<%= link %>"><img src="logo-unand.png" class="mr-2" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini mr-1" href="<%= link %>"><img src="logo-mini.png" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -66,7 +66,7 @@
             </div>
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="dashboardAdmin.html">
+              <a class="nav-link" href="<%= link %>">
                 <i class="icon-grid menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
               </a>
@@ -150,43 +150,32 @@
                                             </td>
                                         </tr>
 
+
+                                        <%
+                                        if(rows.length!=0){
+                                        var i=1;
+                                        rows.forEach(function(data){
+                                        %>
                                         <tr>
-                                          <td>Husnil Kamil, M.T</td>
+                                            <td><%=data.name; %></td>
                                           <td>
                                           <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                             <div class="dropdown">
 
                                               <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                                 <a button type="button" class="btn btn-primary" href="ubahrps.html" role="button">Hapus</a>                                                                    
-                                            </div>                                         
-                                           
+                                            </div>                                                                                    
                                           </div>
                                           </td>
                                       </tr>
+                                      <%  i++; }) %>
+                                      <% } else{ %>
+                                          <tr>
+                                              <td colspan="7">No Data Found</td>
+                                          </tr>
+                                      <% } %>
 
-                                      <tr>
-                                        <td>Hasdi Putra, M.T</td>
-                                        <td>
-                                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                                <a button type="button" class="btn btn-primary" href="ubahrps.html" role="button">Hapus</a>                                                                    
-                                            </div>                                            
-                                         
-                                        </div>
-                                        </td>
-                                    </tr>
 
-                                      <tr>
-                                        <td>Adi Arga Arifnur, M.Kom</td>
-                                        <td>
-                                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                                <a button type="button" class="btn btn-primary" href="ubahrps.html" role="button">Hapus</a>                                                                    
-                                            </div>                                            
-                                         
-                                        </div>
-                                        </td>
-                                    </tr>
                                     </tbody>
                                 </table>
                        </div>
