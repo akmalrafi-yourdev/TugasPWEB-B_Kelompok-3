@@ -1,13 +1,15 @@
 // import sequelize 
-const Sequelize = require ("sequelize");
+const Sequelize = require('sequelize');
 // import connection 
-const db =  require("../config/database.js");
- 
+const db = require('../config/database.js');
+const rps = require('./RPS'); 
+
 // init DataTypes
 const { DataTypes } = Sequelize;
  
 // Define schema
-const cpmk = db.define('course_los', {
+const cpmk = db.define(
+  'course_los', {
   // Define attributes
   id: {
     type: DataTypes.BIGINT,
@@ -44,4 +46,4 @@ const cpmk = db.define('course_los', {
   });
  
 // Export model Product
-module.export = cpmk;
+module.exports = cpmk;
