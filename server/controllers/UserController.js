@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const MataKuliah = require("../models/MataKuliah");
 const IndexRPS = require("../models/IndexRPS");
+const IndexCPMK = require("../models/IndexCPMK");
 
 const Sequelize = require("sequelize");
 
@@ -16,13 +17,7 @@ const getUser = async (req, res) => {
 const getMatkul = async (req, res) => {
   try {
     console.log("jalan");
-    const mataKuliah = await MataKuliah.findAll({
-      include: [
-        {
-          model: IndexRPS.rps,
-        },
-      ],
-    });
+    const mataKuliah = await MataKuliah.findAll();
     res.send(mataKuliah);
   } catch (err) {
     console.log(err);
@@ -63,8 +58,20 @@ const searchMatkul = async (req, res) => {
 
 const matkulDetail = async (req, res) => {
   try {
-    const getRps = await IndexRPS.rps.findAll();
-    res.send(getRps);
+    const rps = await IndexRPS.rps.findAll({
+      where: {
+        course_id: req.params.id,
+      },
+      include: [
+        {
+          model: IndexRPS.detailRPS,
+        },
+        {
+          model: IndexCPMK.cpmk,
+        },
+      ],
+    });
+    res.send(rps);
   } catch (err) {
     console.log(err);
   }

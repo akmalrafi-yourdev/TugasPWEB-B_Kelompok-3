@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const MataKuliah = require("../models/MataKuliah");
 const IndexRPS = require("../models/IndexRPS");
+const IndexCPMK = require("../models/IndexCPMK");
 const DosenPengampu = require("../models/DosenPengampu");
 
 const Sequelize = require("sequelize");
@@ -50,8 +51,12 @@ const listRPS = async (req, res) => {
       },
       include: [
         {
-          model: IndexRPS.detailRPS,
+          model: IndexRPS.detailRPS
         },
+        {
+          model: IndexCPMK.cpmk,
+        },
+
       ],
     });
     res.send(rps);

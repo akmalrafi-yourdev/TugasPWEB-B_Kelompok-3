@@ -41,4 +41,4 @@ const penilaian = db.define('course_plan_assessments', {
   });
  
 // Export model Product
-module.export = penilaian;
+module.exports = penilaian;

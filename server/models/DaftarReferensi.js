@@ -47,4 +47,4 @@ const referensi = db.define('course_plan_references', {
   });
  
 // Export model Product
-module.export = referensi;
+module.exports = referensi;

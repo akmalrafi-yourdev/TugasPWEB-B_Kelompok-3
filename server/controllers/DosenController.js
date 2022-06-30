@@ -19,7 +19,7 @@ const getRPS = async (req, res) => {
 // Get detail RPS
 const getDetailRPS = async (req, res) => {
     try {
-        const dataDetailRPS = await DetailRPS.findAll();
+        const dataDetailRPS = await detailRPS.findAll();
         res.send(dataDetailRPS);
     } catch (err) {
         console.log(err);
@@ -108,7 +108,7 @@ const deleteCPMK = async (req, res) => {
 // Get List  referensi
 const getReferensi = async (req, res) => {
     try {
-        const listReferensi = await DaftarReferensi.findAll();
+        const listReferensi = await referensi.findAll();
         res.send(listReferensi);
     } catch (err) {
         console.log(err);
@@ -118,7 +118,7 @@ const getReferensi = async (req, res) => {
 // Create List referensi
 const createReferensi = async (req, res) => {
     try {
-        await DaftarReferensi.create(req.body);
+        await referensi.create(req.body);
         res.json({
             "message": "Referensi Created"
         });
@@ -130,7 +130,7 @@ const createReferensi = async (req, res) => {
 // Update List referensi
 const updateReferensi = async (req, res) => {
     try {
-        await DaftarReferensi.update(req.body, {
+        await referensi.update(req.body, {
             where: {
                 id: req.params.id
             }
@@ -146,7 +146,7 @@ const updateReferensi = async (req, res) => {
 // Delete list referensi berdasarkan id
 const deleteReferensi = async (req, res) => {
     try {
-        await DaftarReferensi.destroy({
+        await referensi.destroy({
             where: {
                 id: req.params.id
             }
@@ -161,7 +161,7 @@ const deleteReferensi = async (req, res) => {
 // Get komponen penilaian
 const getKomponen = async (req, res) => {
     try {
-        const komponen = await Kp-rps.findAll();
+        const komponen = await penilaian.findAll();
         res.send(komponen);
     } catch (err) {
         console.log(err);
@@ -171,7 +171,7 @@ const getKomponen = async (req, res) => {
 // Create komponen penilaian
 const createKomponen = async (req, res) => {
     try {
-        await Kp-rps.create(req.body);
+        await penilaian.create(req.body);
         res.json({
             "message": "Komponen Penilaian Created"
         });
@@ -183,7 +183,7 @@ const createKomponen = async (req, res) => {
 // Update komponen penilaian
 const updateKomponen = async (req, res) => {
     try {
-        await Kp-rps.update(req.body, {
+        await penilaian.update(req.body, {
             where: {
                 id: req.params.id
             }
@@ -199,7 +199,7 @@ const updateKomponen = async (req, res) => {
 // Delete komponen penilaian berdasarkan id
 const deleteKomponen = async (req, res) => {
     try {
-        await Kp-rps.destroy({
+        await penilaian.destroy({
             where: {
                 id: req.params.id
             }
@@ -214,7 +214,7 @@ const deleteKomponen = async (req, res) => {
 // Get Pertemuan Mingguan RPS
 const getPertemuan = async (req, res) => {
     try {
-        const pertemuan = await PertemuanMingguanRPS.findAll();
+        const pertemuan = await mingguan.findAll();
         res.send(pertemuan);
     } catch (err) {
         console.log(err);
@@ -224,7 +224,7 @@ const getPertemuan = async (req, res) => {
 // Create Pertemuan Mingguan RPS
 const createPertemuan = async (req, res) => {
     try {
-        await PertemuanMingguanRPS.create(req.body);
+        await mingguan.create(req.body);
         res.json({
             "message": "Pertemuan Created"
         });
@@ -236,7 +236,7 @@ const createPertemuan = async (req, res) => {
 // Update Pertemuan Mingguan RPS
 const updatePertemuan = async (req, res) => {
     try {
-        await PertemuanMingguanRPS.update(req.body, {
+        await mingguan.update(req.body, {
             where: {
                 id: req.params.id
             }
@@ -252,7 +252,7 @@ const updatePertemuan = async (req, res) => {
 // Delete Pertemuan Mingguan RPS berdasarkan id
 const deletePertemuan = async (req, res) => {
     try {
-        await PertemuanMingguanRPS.destroy({
+        await mingguan.destroy({
             where: {
                 id: req.params.id
             }
