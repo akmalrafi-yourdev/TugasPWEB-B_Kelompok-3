@@ -87,21 +87,6 @@ app.set("view engine", "ejs");
 //     res.render('index', { text: 'Hey' })
 // })
 
-app.get("/testingmang", (req, res) => {
-  var url = "http://localhost:5500/user/matakuliah";
-
-  axios
-    .get(url)
-    .then(function (response) {
-      res.render(__dirname + "/views/admin/dashboardAdmin.ejs", {
-        rows: response.data,
-      });
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-});
-
 app.get("/dashboardAdmin", (req, res) => {
   res.render(__dirname + "/views/admin/dashboardAdmin.ejs");
 });
