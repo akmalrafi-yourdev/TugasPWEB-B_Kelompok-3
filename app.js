@@ -1,6 +1,6 @@
 // Imports
 const express = require("express");
-const axios = require('axios')
+const axios = require("axios");
 const bodyParser = require("body-parser");
 const app = express();
 const port = 5000;
@@ -17,26 +17,22 @@ const pool = mysql.createPool({
 
 // Get all beers
 app.get("/dashboardAdmin", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
 
-   var url = "http://localhost:5500/user/matakuliah";
-
-   axios
-     .get(url)
-     .then(function (response) {
-       res.render(__dirname + "/views/admin/dashboardAdmin.ejs", {
-         link: "kelolaDosenAdmin",
-         link1: "petaCpmkAdmin",
-         link2: "persentaseMatkulAdmin",
-          rows: response.data,
-        });
-     })
-     .catch(function (error) {
-       console.log(error);
-     });
-   });
-
-
-
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/admin/dashboardAdmin.ejs", {
+        link: "kelolaDosenAdmin",
+        link1: "petaCpmkAdmin",
+        link2: "persentaseMatkulAdmin",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
 
 //   pool.getConnection((err, connection) => {
 //     if (err) throw err;
@@ -98,8 +94,8 @@ app.get("/testingmang", (req, res) => {
     .get(url)
     .then(function (response) {
       res.render(__dirname + "/views/admin/dashboardAdmin.ejs", {
-         rows: response.data,
-       });
+        rows: response.data,
+      });
     })
     .catch(function (error) {
       console.log(error);
