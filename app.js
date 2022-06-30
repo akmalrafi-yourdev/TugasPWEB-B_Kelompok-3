@@ -38,6 +38,28 @@ app.get('/dashboardAdmin', (req, res) => {
    })
 })
 
+app.get('/', (req, res) => {
+   pool.getConnection((err, connection) => {
+       if(err) throw err
+       console.log('connected as id ' + connection.threadId)
+       connection.query('SELECT * from courses ', (err, rows) => {
+           connection.release() // return the connection to pool
+
+           if (!err) {
+            console.log(rows)
+            res.render(__dirname + '/views/admin/index.ejs')
+            // res.render(__dirname + '/views/admin/dashboardAdmin.ejs', { link1: "petaCpmkAdmin",rows })
+            // res.render(__dirname + '/views/admin/dashboardAdmin.ejs', { link2: "persentaseMatkulAdmin",rows })
+            // res.send(rows)
+               console.log(rows.length)
+           } else {
+               console.log(err)
+           }
+           
+       })
+   })
+})
+
 
 
 // Static Files
