@@ -55,7 +55,6 @@ const listRPS = async (req, res) => {
         },
         {
           model: IndexCPMK.cpmk,
-          // as: "jircpmk"
         },
 
       ],

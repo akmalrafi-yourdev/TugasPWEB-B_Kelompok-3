@@ -1,10 +1,9 @@
 {
-  "name": "loki_b3",
+  "name": "server",
   "version": "1.0.0",
-  "description": "Tugas Pemrograman Web B - Universitas Andalas",
+  "description": "",
   "main": "index.js",
   "dependencies": {
-    "axios": "^0.27.2",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "ejs": "^3.1.8",
@@ -23,20 +22,10 @@
     "statuses": "^2.0.1"
   },
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/akmalrafi-yourdev/loki_b3.git"
-  },
+  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/akmalrafi-yourdev/loki_b3/issues"
-  },
-  "homepage": "https://github.com/akmalrafi-yourdev/loki_b3#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.18"
-  }
+  "license": "ISC"
 }
