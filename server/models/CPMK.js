@@ -44,4 +44,4 @@ const cpmk = db.define('course_los', {
   });
  
 // Export model Product
-module.export = cpmk;
+module.exports = cpmk;

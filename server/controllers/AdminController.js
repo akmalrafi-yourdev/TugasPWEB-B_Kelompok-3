@@ -42,4 +42,4 @@ const updateCoursePlanLecturers = async (req, res) => {
   }
 };
 
-module.exports = { inputCoursePlanLecturers, updateCoursePlanLecturers, createMatkul};
+module.exports = { inputCoursePlanLecturers, updateCoursePlanLecturers, createMatkul };
