@@ -69,6 +69,9 @@ const matkulDetail = async (req, res) => {
         {
           model: IndexCPMK.cpmk,
         },
+        {
+          model: IndexRPS.References,
+        },
       ],
     });
     res.send(rps);
