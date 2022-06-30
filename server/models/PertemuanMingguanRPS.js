@@ -44,4 +44,4 @@ const mingguan = db.define('course_plan_details', {
   });
  
 // Export model Product
-module.export = mingguan;
+module.exports = mingguan;
