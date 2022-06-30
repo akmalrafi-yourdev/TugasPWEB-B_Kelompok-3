@@ -1,7 +1,7 @@
 // import sequelize 
-import { Sequelize } from "sequelize";
+const Sequelize = require ("sequelize");
 // import connection 
-import db from "../config/database.js";
+const db =  require("../config/database.js");
  
 // init DataTypes
 const { DataTypes } = Sequelize;
@@ -44,4 +44,4 @@ const mingguan = db.define('course_plan_details', {
   });
  
 // Export model Product
-export default mingguan;
+module.export = mingguan;

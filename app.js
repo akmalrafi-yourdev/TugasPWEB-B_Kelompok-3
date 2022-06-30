@@ -1,7 +1,44 @@
 // Imports
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express()
 const port = 5000
+const mysql = require('mysql2')
+
+
+// Data Base
+const pool  = mysql.createPool({
+   connectionLimit : 10,
+   host            : 'localhost',
+   user            : 'root',
+   password        : '',
+   database        : 'loki'
+})
+
+// Get all beers
+app.get('/dashboardAdmin', (req, res) => {
+   pool.getConnection((err, connection) => {
+       if(err) throw err
+       console.log('connected as id ' + connection.threadId)
+       connection.query('SELECT * from courses ', (err, rows) => {
+           connection.release() // return the connection to pool
+
+           if (!err) {
+            console.log(rows)
+            res.render(__dirname + '/views/admin/dashboardAdmin.ejs', { link: "kelolaDosenAdmin",link1: "petaCpmkAdmin",link2: "persentaseMatkulAdmin",rows })
+            // res.render(__dirname + '/views/admin/dashboardAdmin.ejs', { link1: "petaCpmkAdmin",rows })
+            // res.render(__dirname + '/views/admin/dashboardAdmin.ejs', { link2: "persentaseMatkulAdmin",rows })
+            // res.send(rows)
+               console.log(rows.length)
+           } else {
+               console.log(err)
+           }
+           
+       })
+   })
+})
+
+
 
 // Static Files
 app.use(express.static('style'));
@@ -14,6 +51,14 @@ app.use(express.static('assets'));
 app.use('', express.static(__dirname + ''))
 app.use('/js', express.static(__dirname + 'vendors/js'))
 app.use('/ti-icons', express.static(__dirname + 'vendors/ti-icons'))
+
+// Parsing middleware
+// Parse application/x-www-form-urlencoded
+// app.use(bodyParser.urlencoded({ extended: false })); // Remove 
+app.use(express.urlencoded({extended: true})); // New
+// Parse application/json
+// app.use(bodyParser.json()); // Remove
+app.use(express.json()); // New
 
 
 // Set View's

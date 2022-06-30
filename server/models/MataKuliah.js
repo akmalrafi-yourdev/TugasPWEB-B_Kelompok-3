@@ -1,12 +1,13 @@
-const Sequelize = require('sequelize');
+const Sequelize = require("sequelize");
 
-const db = require('../config/database.js');
-const rps = require('../models/RPS.js');
+const db = require("../config/database.js");
+const IndexRPS = require("../models/IndexRPS");
+const RPS = require("../models/RPS");
 
 const { DataTypes } = Sequelize;
 
 const MataKuliah = db.define(
-  "course",
+  "courses",
   {
     id: {
       type: DataTypes.INTEGER,
@@ -48,8 +49,11 @@ const MataKuliah = db.define(
   }
 );
 
-MataKuliah.hasMany(rps, {
+MataKuliah.hasOne(IndexRPS.rps, {
   foreignKey: "course_id",
+});
+IndexRPS.rps.belongsTo(MataKuliah, {
+  foreignKey: "id",
 });
 
 module.exports = MataKuliah;

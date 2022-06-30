@@ -15,8 +15,14 @@ const getUser = async (req, res) => {
 
 const getMatkul = async (req, res) => {
   try {
-    console.log("jalan")
-    const mataKuliah = await MataKuliah.findAll();
+    console.log("jalan");
+    const mataKuliah = await MataKuliah.findAll({
+      include: [
+        {
+          model: IndexRPS.rps,
+        },
+      ],
+    });
     res.send(mataKuliah);
   } catch (err) {
     console.log(err);
