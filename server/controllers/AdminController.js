@@ -51,7 +51,7 @@ const listRPS = async (req, res) => {
       },
       include: [
         {
-          model: IndexRPS.detailRPS
+          model: IndexRPS.detailRPS,
         },
         {
           model: IndexCPMK.cpmk,
@@ -59,7 +59,6 @@ const listRPS = async (req, res) => {
         {
           model: IndexRPS.References,
         },
-
       ],
     });
     res.send(rps);
