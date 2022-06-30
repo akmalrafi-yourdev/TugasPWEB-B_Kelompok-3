@@ -139,6 +139,7 @@ app.set("view engine", "ejs");
 //     res.render('index', { text: 'Hey' })
 // })
 
+<<<<<<< HEAD
 
 // app.get("/testingmang", (req, res) => {
 //   var url = "http://localhost:5500/user/matakuliah";
@@ -160,5 +161,19 @@ app.set("view engine", "ejs");
 
 
   
+=======
+app.get("/dashboardAdmin", (req, res) => {
+  res.render(__dirname + "/views/admin/dashboardAdmin.ejs");
+});
+app.get("/kelolaDosenAdmin", (req, res) => {
+  res.render(__dirname + "/views/admin/kelolaDosenAdmin.ejs");
+});
+app.get("/persentaseMatkulAdmin", (req, res) => {
+  res.render(__dirname + "/views/admin/persentaseMatkulAdmin.ejs");
+});
+app.get("/petaCpmkAdmin", (req, res) => {
+  res.render(__dirname + "/views/admin/petaCpmkAdmin.ejs");
+});
+>>>>>>> 0300541d8398911e976581b6a14de73f28149c8c
 
 app.listen(port, () => console.info(`App listening on port ${port}`));
