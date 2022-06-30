@@ -11,6 +11,7 @@ const router = express.Router();
 router.post("/admin/inputDosenPengampu/", AdminController.inputCoursePlanLecturers);
 router.put("/admin/updateDosenPengampu/:id", AdminController.updateCoursePlanLecturers);
 router.post('/admin/matakuliah', AdminController.createMatkul);
+router.get('/admin/rps/:id', AdminController.listRPS);
 
 //Dosen/Lecturer Routing
 router.get('/dosen/rps', DosenController.getRPS)
