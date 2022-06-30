@@ -7,7 +7,7 @@ const RPS = require("../models/RPS");
 const { DataTypes } = Sequelize;
 
 const MataKuliah = db.define(
-  "course",
+  "courses",
   {
     id: {
       type: DataTypes.INTEGER,

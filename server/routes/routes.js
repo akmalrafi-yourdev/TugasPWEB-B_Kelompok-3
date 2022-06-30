@@ -12,7 +12,7 @@ router.post("/admin/inputDosenPengampu/", AdminController.inputCoursePlanLecture
 router.put("/admin/updateDosenPengampu/:id", AdminController.updateCoursePlanLecturers);
 
 //Dosen/Lecturer Routing
-
+// DOSEN/ROUTES
 router.get('/dosen/rps', DosenController.getRPS)
 router.get('/dosen/detail-rps', DosenController.getDetailRPS)
 router.post('/dosen/rps', DosenController.createRPS)
@@ -38,5 +38,8 @@ router.delete('/dosen/pertemuan', DosenController.deletePertemuan)
 router.get("/user/matakuliah", UserController.getMatkul);
 router.get("/user/matakuliah/:search", UserController.searchMatkul);
 router.get("/user/matakuliah/rps/:id", UserController.matkulDetail);
+
+// USER/MAHASISWA ROUTES
+router.post('/admin/matakuliah', AdminController.createMatkul)
 
 module.exports = router;
