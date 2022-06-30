@@ -49,4 +49,5 @@ const References = db.define(
     freezeTableName: true,
   }
 );
+
 module.exports = References;

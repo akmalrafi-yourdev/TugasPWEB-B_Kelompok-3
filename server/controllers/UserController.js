@@ -70,7 +70,7 @@ const matkulDetail = async (req, res) => {
           model: IndexCPMK.cpmk,
         },
         {
-          model: IndexRPS.References,
+          model: MataKuliah,
         },
       ],
     });
