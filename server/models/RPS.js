@@ -2,7 +2,7 @@
 const Sequelize = require('sequelize');
 
 const db = require('../config/database.js');
-// import detailRPS from "../models/DetailRPS.js";
+const cpmk = require("./cpmk");
 
 // init DataTypes
 const { DataTypes } = Sequelize;
@@ -69,6 +69,8 @@ const rps = db.define(
 );
 
 // rps.hasMany(detailRPS, { foreignKey: "course_plan_id" });
+// rps.hasMany(cpmk, { foreignKey: "course_plan_id" });
+// cpmk.belongsTo(rps, { foreignKey: "id"});
 
 // Export model Product
 module.exports = rps;
