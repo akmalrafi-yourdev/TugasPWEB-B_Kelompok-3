@@ -33,24 +33,23 @@ app.get("/dashboardAdmin", (req, res) => {
     .catch(function (error) {
       console.log(error);
     });
-  });
+});
 
-  app.get("/kelolaDosenAdmin", (req, res) => {
+app.get("/kelolaDosenAdmin", (req, res) => {
+  var url = "http://localhost:5500/admin/listdosen";
 
-    var url = "http://localhost:5500/admin/listdosen";
-  
-    axios
-      .get(url)
-      .then(function (response) {
-        res.render(__dirname + "/views/admin/kelolaDosenAdmin.ejs", {
-          link: "dashboardAdmin",
-          rows: response.data,
-          });
-      })
-      .catch(function (error) {
-        console.log(error);
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/admin/kelolaDosenAdmin.ejs", {
+        link: "dashboardAdmin",
+        rows: response.data,
       });
+    })
+    .catch(function (error) {
+      console.log(error);
     });
+});
 
 app.get("/persentaseMatkulAdmin", (req, res) => {
   var url = "http://localhost:5500/user/matakuliah";
@@ -84,8 +83,6 @@ app.get("/petaCpmkAdmin", (req, res) => {
     });
 });
 
-<<<<<<< HEAD
-=======
 app.get("/tambahrps", (req, res) => {
   var url = "http://localhost:5500/user/matakuliah";
 
@@ -162,7 +159,6 @@ app.get("/pengelolaan-rps-dosen", (req, res) => {
 //       }
 //     });
 //   });
->>>>>>> 5989f8b195e0071d9dc346c73a3c20e9dde77b1f
 
 // Static Files
 app.use(express.static("style"));
@@ -193,8 +189,6 @@ app.set("view engine", "ejs");
 //     res.render('index', { text: 'Hey' })
 // })
 
-
-
 // app.get("/testingmang", (req, res) => {
 //   var url = "http://localhost:5500/user/matakuliah";
 
@@ -209,12 +203,6 @@ app.set("view engine", "ejs");
 //       console.log(error);
 //     });
 // });
-
-
-
-
-
-  
 
 app.get("/kelolaDosenAdmin", (req, res) => {
   res.render(__dirname + "/views/admin/kelolaDosenAdmin.ejs");
