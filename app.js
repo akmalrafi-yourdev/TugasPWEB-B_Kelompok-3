@@ -33,24 +33,23 @@ app.get("/dashboardAdmin", (req, res) => {
     .catch(function (error) {
       console.log(error);
     });
-  });
+});
 
-  app.get("/kelolaDosenAdmin", (req, res) => {
+app.get("/kelolaDosenAdmin", (req, res) => {
+  var url = "http://localhost:5500/admin/listdosen";
 
-    var url = "http://localhost:5500/admin/listdosen";
-  
-    axios
-      .get(url)
-      .then(function (response) {
-        res.render(__dirname + "/views/admin/kelolaDosenAdmin.ejs", {
-          link: "dashboardAdmin",
-          rows: response.data,
-          });
-      })
-      .catch(function (error) {
-        console.log(error);
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/admin/kelolaDosenAdmin.ejs", {
+        link: "dashboardAdmin",
+        rows: response.data,
       });
+    })
+    .catch(function (error) {
+      console.log(error);
     });
+});
 
 app.get("/persentaseMatkulAdmin", (req, res) => {
   var url = "http://localhost:5500/user/matakuliah";
@@ -109,6 +108,38 @@ app.get("/dashboarddosen", (req, res) => {
       res.render(__dirname + "/views/dosen/dashboarddosen.ejs", {
         link: "dashboarddosen",
         link2: "pengelolaan-rps-dosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/logindosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/loginmahasiswa.ejs", {
+        link3: "dashboarddosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/loginadmin", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/login-new.ejs", {
+        link3: "dashboardAdmin",
         rows: response.data,
       });
     })
@@ -227,8 +258,6 @@ app.set("view engine", "ejs");
 //     res.render('index', { text: 'Hey' })
 // })
 
-
-
 // app.get("/testingmang", (req, res) => {
 //   var url = "http://localhost:5500/user/matakuliah";
 
@@ -243,12 +272,6 @@ app.set("view engine", "ejs");
 //       console.log(error);
 //     });
 // });
-
-
-
-
-
-  
 
 app.get("/kelolaDosenAdmin", (req, res) => {
   res.render(__dirname + "/views/admin/kelolaDosenAdmin.ejs");
