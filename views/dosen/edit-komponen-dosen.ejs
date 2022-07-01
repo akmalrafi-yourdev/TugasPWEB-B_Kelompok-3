@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Universitas Andalas</title>
     <!-- plugins:css -->
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="vendors/feather/feather.css" />
     <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" />
     <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
@@ -70,7 +72,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pengelolaan-rps.html">
+              <a class="nav-link" href="pengelolaan-rps-dosen.html">
                 <i class="icon-paper menu-icon"></i>
                 <span class="menu-title">Pengelolaan RPS</span>
               </a>
@@ -80,55 +82,59 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-            <div class="row">
-              <div class="col-md-12 grid-margin">
+            <div class="row"> 
+              <div class="col-md-12">
                 <div class="row">
                   <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                    <h3 class="font-weight-bold">Welcome Dosen</h3>
-                    <h6 class="font-weight-normal mb-0">Selamat datang di halaman pengelolaan RPS</h6>
+                    <h3 class="font-weight-bold">Ubah Komponen Penilaian</h3>
+                    <h6 class="font-weight-normal mb-0">Mengubah Komponen Penilaian baru</h6>
                   </div>
-            <div class="row">
-              <div class="col-md-12 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <p class="card-title">Advanced Table</p>
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="table-responsive">
-                          <table id="example" class="display expandable-table" style="width: 100%">
-                            <thead>
-                              <tr>
-                                <th>Quote#</th>
-                                <th>Product</th>
-                                <th>Business type</th>
-                                <th>Policy holder</th>
-                                <th>Premium</th>
-                                <th>Status</th>
-                                <th>Updated at</th>
-                                <th></th>
-                              </tr>
-                              <tr>
-                                <td>Cedric Kelly</td>
-                                <td>Senior Javascript Developer</td>
-                                <td>Edinburgh</td>
-                                <td>
-                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                     <a class="btn btn-success" href="lihatrpsdosen.html" role="button">Lihat</a>
-                                    <a class="btn btn-warning" href="ubahrps.html" role="button">Edit</a>
-                                    <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Revisi</a>
-                                  </div>
-                                </td>
-                                <td>1</td>
-                              </tr>
-                            </thead>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="col" style="position: relative; margin-bottom: 2%"> 
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                      <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="pengelolaan-rps-dosen.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="lihat-rps-dosen.html">lihat</a></li>
+                        <li  class="breadcrumb-item"><a href="detail-dosen.html">detail</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">edit</li>
+
+                      </ol>
+                    </nav>
                   </div>
                 </div>
-              </div>
-            </div>
+                <div id="layoutSidenav_content">
+                 <main>
+                     </ol>
+                     
+                     <!-- TAMBAHKAN KONTEN DISINI -->
+                     <div class="card-body" style="box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);border-radius: 10px;" >
+                     <div class="card mb-4">
+                       <div class="card-body">
+                        <h4 class="card-title">Komponen Penilaian</h4>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>Nama</label>
+                            <div id="the-basics">
+                              <input class="typeahead" type="text" placeholder="UAS"  />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <label>Persentase</label>
+                            <div id="bloodhound">
+                              <input class="typeahead" type="text" placeholder="50%" style="width: 40%;" />
+                            </div>
+                          </div>
+                        </div>
+                        <a class="btn btn-primary" href="<%= link4 %>" role="button">Simpan</a>
+                        <button class="btn btn-light">Batal</button>
+                      </form>
+                       </div>
+                     </div>
+                    </div>
+                   </div>
+                 </main>
+
+               </div>
+             </div>
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
@@ -163,5 +169,11 @@
     <script src="js/dashboard.js"></script>
     <script src="js/Chart.roundedBarCharts.js"></script>
     <!-- End custom js for this page-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 </html>
