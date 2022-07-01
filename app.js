@@ -35,6 +35,23 @@ app.get("/dashboardAdmin", (req, res) => {
     });
 });
 
+app.get("/dosenRpsAdmin", (req, res) => {
+  var url = "http://localhost:5500/admin/listdosen";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/admin/dosenRpsAdmin.ejs", {
+        link: "dashboardAdmin",
+        link2: "kelolaDosenAdmin",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
 app.get("/kelolaDosenAdmin", (req, res) => {
   var url = "http://localhost:5500/admin/listdosen";
 
@@ -118,14 +135,47 @@ app.get("/dashboarddosen", (req, res) => {
     });
 });
 
-app.get("/pengelolaan-rps-dosen", (req, res) => {
+app.get("/logindosen", (req, res) => {
   var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/loginmahasiswa.ejs", {
+        link3: "dashboarddosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/loginadmin", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/login-new.ejs", {
+        link3: "dashboardAdmin",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/pengelolaan-rps-dosen", (req, res) => {
+  var url = "http://localhost:5500/admin/rps";
 
   axios
     .get(url)
     .then(function (response) {
       res.render(__dirname + "/views/dosen/pengelolaan-rps-dosen.ejs", {
         link: "dashboarddosen",
+        link1: "pengelolaan-rps-dosen",
         link2: "pengelolaan-rps-dosen",
         link3: "tambahrps",
         link4: "ubahrps",
@@ -159,7 +209,7 @@ app.get("/lihat-rps-dosen", (req, res) => {
 });
 
 app.get("/detail-dosen", (req, res) => {
-  var url = "http://localhost:5500/user/matakuliah";
+  var url = "http://localhost:5500/admin/rps";
 
   axios
     .get(url)
@@ -385,6 +435,7 @@ app.get("/ubahrps", (req, res) => {
 //       }
 //     });
 //   });
+
 
 // Static Files
 app.use(express.static("style"));
