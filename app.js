@@ -84,6 +84,119 @@ app.get("/petaCpmkAdmin", (req, res) => {
     });
 });
 
+app.get("/tambahrps", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/tambahrps.ejs", {
+        link: "dashboarddosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/dashboarddosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/dashboarddosen.ejs", {
+        link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/pengelolaan-rps-dosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/pengelolaan-rps-dosen.ejs", {
+        link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
+        link3: "tambahrps",
+        link4: "ubahrps",
+        link5: "detail-dosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/detail-dosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/detail-dosen.ejs", {
+        link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
+        link3: "tambahrps",
+        link4: "ubahrps",
+        link5: "detail-dosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/ubahrps", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/ubahrps.ejs", {
+        link4: "ubahrps",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+//   pool.getConnection((err, connection) => {
+//     if (err) throw err;
+//     console.log("connected as id " + connection.threadId);
+//     connection.query("SELECT * from courses ", (err, rows) => {
+//       connection.release(); // return the connection to pool
+
+//       if (!err) {
+//         console.log(rows);
+//         res.render(__dirname + "/views/admin/dashboardAdmin.ejs", {
+//           link: "kelolaDosenAdmin",
+//           link1: "petaCpmkAdmin",
+//           link2: "persentaseMatkulAdmin",
+//           rows,
+//         });
+//         // res.render(__dirname + '/views/admin/dashboardAdmin.ejs', { link1: "petaCpmkAdmin",rows })
+//         // res.render(__dirname + '/views/admin/dashboardAdmin.ejs', { link2: "persentaseMatkulAdmin",rows })
+//         // res.send(rows)
+//         console.log(rows.length);
+//       } else {
+//         console.log(err);
+//       }
+//     });
+//   });
+
 
 // Static Files
 app.use(express.static("style"));
