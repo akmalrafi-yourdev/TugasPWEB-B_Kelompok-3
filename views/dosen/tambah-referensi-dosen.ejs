@@ -27,8 +27,8 @@
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo mr-1" href="index.html"><img src="logo-unand.png" class="mr-2" alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini mr-1" href="index.html"><img src="logo-mini.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo mr-1" href="<%= link %>"><img src="logo-unand.png" class="mr-2" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini mr-1" href="<%= link %>"><img src="logo-mini.png" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -66,13 +66,13 @@
             </div>
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="<%= link %>">
                 <i class="icon-grid menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pengelolaan-rps-dosen.html">
+              <a class="nav-link" href="<%= link2 %>">
                 <i class="icon-paper menu-icon"></i>
                 <span class="menu-title">Pengelolaan RPS</span>
               </a>
@@ -86,16 +86,16 @@
               <div class="col-md-12">
                 <div class="row">
                   <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                    <h3 class="font-weight-bold">Ubah CPMK</h3>
-                    <h6 class="font-weight-normal mb-0">Mengubah cpmk</h6>
+                    <h3 class="font-weight-bold">Tambah Referensi</h3>
+                    <h6 class="font-weight-normal mb-0">Menambahkan referensi baru</h6>
                   </div>
                   <div class="col" style="position: relative; margin-bottom: 2%"> 
                     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                       <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="pengelolaan-rps-dosen.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href="lihat-rps-dosen.html">lihat</a></li>
-                        <li  class="breadcrumb-item"><a href="detail-dosen.html">detail</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">edit</li>
+                        <li class="breadcrumb-item"><a href="<%= link2 %>">Home</a></li>
+                        <li class="breadcrumb-item"><a href="<%= link5 %>">lihat</a></li>
+                        <li  class="breadcrumb-item"><a href="<%= link4 %>">detail</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">tambah</li>
 
                       </ol>
                     </nav>
@@ -109,12 +109,28 @@
                      <div class="card-body" style="box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);border-radius: 10px;" >
                      <div class="card mb-4">
                        <div class="card-body">
-                        <h4 class="card-title">Capaian Pembelajaran Mata Kuliah</h4>
+                        <h4 class="card-title">Referensi</h4>
                         <div class="form-group">
-                          <input type="text" class="form-control" id="exampleInputCity1" />
+                          <label for="exampleInputCity1">Author</label>
+                          <input type="text" class="form-control" id="exampleInputCity1" placeholder="Masukkan nama pengarang" />
+                          <br>
+                          <label for="exampleInputCity1">Title</label>
+                          <input type="text" class="form-control" id="exampleInputCity1" placeholder="Masukkan judul" />
+                       <br>
+                          <label for="exampleInputCity1">	Publisher</label>
+                          <input type="text" class="form-control" id="exampleInputCity1" placeholder="Masukkan publisher" />
+                        
+                       <br>
+                          <label for="exampleInputCity1">	Year</label>
+                          <input type="text" class="form-control" id="exampleInputCity1" placeholder="Masukkan tahun" />
+
                         </div>
-                        <button type="submit" class="btn btn-primary mr-2">Simpan</button>
-                        <button class="btn btn-light">Batal</button>
+                        <div class="form-group">
+                          <label for="exampleTextarea1">Description</label>
+                          <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                        </div>
+                        <a class="btn btn-primary" href="<%= link4 %>" role="button">Simpan</a>
+                        <a class="btn btn-light" href="<%= link4 %>" role="button">Batal</a>
                       </form>
                        </div>
                      </div>
