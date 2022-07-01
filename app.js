@@ -36,13 +36,14 @@ app.get("/dashboardAdmin", (req, res) => {
 });
 
 app.get("/kelolaDosenAdmin", (req, res) => {
-  var url = "http://localhost:5500/user/matakuliah";
+  var url = "http://localhost:5500/admin/listdosen";
 
   axios
     .get(url)
     .then(function (response) {
       res.render(__dirname + "/views/admin/kelolaDosenAdmin.ejs", {
         link: "dashboardAdmin",
+        link2: "dosenRpsAdmin",
         rows: response.data,
       });
     })
