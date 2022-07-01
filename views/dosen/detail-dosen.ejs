@@ -29,8 +29,8 @@
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo mr-1" href="index.html"><img src="logo-unand.png" class="mr-2" alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini mr-1" href="index.html"><img src="logo-mini.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo mr-1" href="<%= link %>"><img src="logo-unand.png" class="mr-2" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini mr-1" href="<%= link %>"><img src="logo-mini.png" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -68,13 +68,13 @@
             </div>
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="<%= link %>">
                 <i class="icon-grid menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pengelolaan-rps-dosen.html">
+              <a class="nav-link" href="<%= link2 %>">
                 <i class="icon-paper menu-icon"></i>
                 <span class="menu-title">Pengelolaan RPS</span>
               </a>
@@ -94,7 +94,7 @@
                   <div class="col" style="position: relative; margin-bottom: 2%"> 
                     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                       <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="pengelolaan-rps-dosen.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="<%= link2 %>">Home</a></li>
                         <li class="breadcrumb-item"><a href="lihat-rps-dosen.html">lihat</a></li>
                         <li class="breadcrumb-item active" aria-current="page">detail</li>
 
@@ -129,7 +129,7 @@
                                 <td>
                                 <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                   <a class="btn btn-warning icon-paper menu-icon" href="<%= link8 %>" role="button"></a>
-                                 <a class="btn btn-danger icon-trash menu-icon" href="ubahrps.html" role="button"></a>
+                                 <a class="btn btn-danger icon-trash menu-icon" href="<%= link4 %>" role="button"></a>
                                </div>
                                </td>
     
@@ -142,7 +142,7 @@
                                 <td>
                                   <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                     <a class="btn btn-warning icon-paper menu-icon" href="<%= link8 %>" role="button"></a>
-                                   <a class="btn btn-danger icon-trash menu-icon" href="ubahrps.html" role="button"></a>
+                                   <a class="btn btn-danger icon-trash menu-icon" href="<%= link4 %>" role="button"></a>
                                  </div>
                                  </td>
                                
@@ -155,7 +155,7 @@
                                 <td>
                                   <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                     <a class="btn btn-warning icon-paper menu-icon" href="<%= link8 %>" role="button"></a>
-                                   <a class="btn btn-danger icon-trash menu-icon" href="ubahrps.html" role="button"></a>
+                                   <a class="btn btn-danger icon-trash menu-icon" href="<%= link4 %>" role="button"></a>
                                  </div>
                                  </td>
                               </tr>
@@ -202,7 +202,7 @@
                                <td>
                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                  <a class="btn btn-warning icon-paper menu-icon" href="<%= link11 %>" role="button"></a>
-                                <a class="btn btn-danger icon-trash menu-icon" href="ubahrps.html" role="button"></a>
+                                <a class="btn btn-danger icon-trash menu-icon" href="<%= link4 %>" role="button"></a>
                               </div>
                               </td>
    
@@ -218,7 +218,7 @@
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                    <a class="btn btn-warning icon-paper menu-icon" href="<%= link11 %>" role="button"></a>
-                                  <a class="btn btn-danger icon-trash menu-icon" href="ubahrps.html" role="button"></a>
+                                  <a class="btn btn-danger icon-trash menu-icon" href="<%= link4 %>" role="button"></a>
                                 </div>
                                 </td>
                               
@@ -234,7 +234,7 @@
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                    <a class="btn btn-warning icon-paper menu-icon" href="<%= link11 %>" role="button"></a>
-                                  <a class="btn btn-danger icon-trash menu-icon" href="ubahrps.html" role="button"></a>
+                                  <a class="btn btn-danger icon-trash menu-icon" href="<%= link4 %>" role="button"></a>
                                 </div>
                                 </td>
                              </tr>
@@ -272,7 +272,7 @@
                              <td>
                              <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                <a class="btn btn-warning icon-paper menu-icon" href="<%= link9 %>" role="button"></a>
-                              <a class="btn btn-danger icon-trash menu-icon" href="ubahrps.html" role="button"></a>
+                              <a class="btn btn-danger icon-trash menu-icon" href="<%= link4 %>" role="button"></a>
                             </div>
                             </td>
  
@@ -284,7 +284,7 @@
                              <td>
                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                  <a class="btn btn-warning icon-paper menu-icon" href="<%= link9 %>" role="button"></a>
-                                <a class="btn btn-danger icon-trash menu-icon" href="ubahrps.html" role="button"></a>
+                                <a class="btn btn-danger icon-trash menu-icon" href="<%= link4 %>" role="button"></a>
                               </div>
                               </td> 
                            </tr>
@@ -323,7 +323,7 @@
                            <td>
                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                              <a class="btn btn-warning icon-paper menu-icon" href="<%= link10 %>" role="button"></a>
-                            <a class="btn btn-danger icon-trash menu-icon" href="ubahrps.html" role="button"></a>
+                            <a class="btn btn-danger icon-trash menu-icon" href="<%= link4 %>" role="button"></a>
                           </div>
                           </td>
 
@@ -336,7 +336,7 @@
                            <td>
                              <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                <a class="btn btn-warning icon-paper menu-icon" href="<%= link10 %>" role="button"></a>
-                              <a class="btn btn-danger icon-trash menu-icon" href="ubahrps.html" role="button"></a>
+                              <a class="btn btn-danger icon-trash menu-icon" href="<%= link4 %>" role="button"></a>
                             </div>
                             </td>
                           
@@ -349,7 +349,7 @@
                            <td>
                              <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                <a class="btn btn-warning icon-paper menu-icon" href="<%= link10 %>" role="button"></a>
-                              <a class="btn btn-danger icon-trash menu-icon" href="ubahrps.html" role="button"></a>
+                              <a class="btn btn-danger icon-trash menu-icon" href="<%= link4 %>" role="button"></a>
                             </div>
                             </td>
                          </tr>
