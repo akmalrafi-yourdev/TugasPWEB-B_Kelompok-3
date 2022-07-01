@@ -23,7 +23,7 @@ app.get("/dashboardAdmin", (req, res) => {
     .get(url)
     .then(function (response) {
       res.render(__dirname + "/views/admin/dashboardAdmin.ejs", {
-        link: "dosenRpsAdmin",
+        link: "kelolaDosenAdmin",
         link1: "petaCpmkAdmin",
         link2: "persentaseMatkulAdmin",
         link3: "dashboardAdmin",
@@ -58,7 +58,7 @@ app.get("/kelolaDosenAdmin", (req, res) => {
   axios
     .get(url)
     .then(function (response) {
-      res.render(__dirname + "/views/admin/dosenRpsAdmin.ejs", {
+      res.render(__dirname + "/views/admin/kelolaDosenAdmin.ejs", {
         link: "dashboardAdmin",
         rows: response.data,
       });
