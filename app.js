@@ -60,7 +60,6 @@ app.get("/kelolaDosenAdmin", (req, res) => {
     .then(function (response) {
       res.render(__dirname + "/views/admin/dosenRpsAdmin.ejs", {
         link: "dashboardAdmin",
-        link2: "kelolaDosenAdmin",
         rows: response.data,
       });
     })
@@ -93,6 +92,95 @@ app.get("/petaCpmkAdmin", (req, res) => {
     .then(function (response) {
       res.render(__dirname + "/views/admin/petaCpmkAdmin.ejs", {
         link: "dashboardAdmin",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/tambahrps", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/tambahrps.ejs", {
+        link: "dashboarddosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/dashboarddosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/dashboarddosen.ejs", {
+        link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/pengelolaan-rps-dosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/pengelolaan-rps-dosen.ejs", {
+        link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
+        link3: "tambahrps",
+        link4: "ubahrps",
+        link5: "detail-dosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/detail-dosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/detail-dosen.ejs", {
+        link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
+        link3: "tambahrps",
+        link4: "ubahrps",
+        link5: "detail-dosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/ubahrps", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/ubahrps.ejs", {
+        link4: "ubahrps",
         rows: response.data,
       });
     })
@@ -154,11 +242,23 @@ app.set("view engine", "ejs");
 //     res.render('index', { text: 'Hey' })
 // })
 
-app.get("/dashboardAdmin", (req, res) => {
-  res.render(__dirname + "/views/admin/dashboardAdmin.ejs");
-});
-app.get("/dosenRpsAdmin", (req, res) => {
-  res.render(__dirname + "/views/admin/dosenRpsAdmin.ejs");
+// app.get("/testingmang", (req, res) => {
+//   var url = "http://localhost:5500/user/matakuliah";
+
+//   axios
+//     .get(url)
+//     .then(function (response) {
+//       res.render(__dirname + "/views/admin/dashboardAdmin.ejs", {
+//          rows: response.data,
+//        });
+//     })
+//     .catch(function (error) {
+//       console.log(error);
+//     });
+// });
+
+app.get("/kelolaDosenAdmin", (req, res) => {
+  res.render(__dirname + "/views/admin/kelolaDosenAdmin.ejs");
 });
 app.get("/persentaseMatkulAdmin", (req, res) => {
   res.render(__dirname + "/views/admin/persentaseMatkulAdmin.ejs");
