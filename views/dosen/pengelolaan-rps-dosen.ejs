@@ -27,8 +27,8 @@
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo mr-1" href="index.html"><img src="logo-unand.png" class="mr-2" alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini mr-1" href="index.html"><img src="logo-mini.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo mr-1" href="<%= link %>"><img src="logo-unand.png" class="mr-2" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini mr-1" href="<%= link %>"><img src="logo-mini.png" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -66,13 +66,13 @@
             </div>
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="<%= link %>">
                 <i class="icon-grid menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pengelolaan-rps-dosen.html">
+              <a class="nav-link" href="<%= link2 %>">
                 <i class="icon-paper menu-icon"></i>
                 <span class="menu-title">Pengelolaan RPS</span>
               </a>
@@ -102,7 +102,7 @@
                      </ol>
                      
                          <div class="d-grid gap-2 d-md-flex">
-                           <a class="btn btn-primary icon-plus menu-icon" href="tambah-rps-dosen.html" role="button"> Tambah RPS</a>
+                           <a class="btn btn-primary icon-plus menu-icon" href="<%= link3 %>" role="button"> Tambah RPS</a>
                        </div><br>
                      <!-- TAMBAHKAN KONTEN DISINI -->
                      <div class="card-body" style="box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);border-radius: 10px;" align="center" >
@@ -134,7 +134,7 @@
                                <td>Edinburgh</td>
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                   <a type="button" class="btn btn-success" href="lihat-rps-dosen.html">Lihat</a>
+                                   <a type="button" class="btn btn-success" href="<%= link2 %>">Lihat</a>
                                    <a class="btn btn-warning" href="ubahrps.html" role="button">Edit</a>
                                    <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Revisi</a>
                                  </div>
@@ -147,7 +147,7 @@
                                <td>Tokyo</td>
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                   <a class="btn btn-success" href="lihat-rps-dosen.html" role="button">Lihat</a>
+                                   <a class="btn btn-success" href="<%= link2 %>" role="button">Lihat</a>
                                    <a class="btn btn-warning" href="ubahrps.html" role="button">Edit</a>
                                    <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Revisi</a>
                                    
@@ -163,7 +163,7 @@
                                <td>San Francisco</td>
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                    <a class="btn btn-success" href="lihat-rps-dosen.html" role="button">Lihat</a>
+                                    <a class="btn btn-success" href="<%= link2 %>" role="button">Lihat</a>
                                    <a class="btn btn-warning" href="ubahrps.html" role="button">Edit</a>
                                    <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Revisi</a>
                                  </div>
@@ -176,7 +176,7 @@
                                <td>Edinburgh</td>
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                    <a class="btn btn-success" href="lihat-rps-dosen.html" role="button">Lihat</a>
+                                    <a class="btn btn-success" href="<%= link2 %>" role="button">Lihat</a>
                                    <a class="btn btn-warning" href="ubahrps.html" role="button">Edit</a>
                                    <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Revisi</a>
                                  </div>
@@ -189,7 +189,7 @@
                                <td>Tokyo</td>
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                    <a class="btn btn-success" href="lihat-rps-dosen.html" role="button">Lihat</a>
+                                    <a class="btn btn-success" href="<%= link2 %>" role="button">Lihat</a>
                                    <a class="btn btn-warning" href="ubahrps.html" role="button">Edit</a>
                                    <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Revisi</a>
                                  </div>
@@ -202,7 +202,7 @@
                                <td>New York</td>
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                    <a class="btn btn-success" href="lihat-rps-dosen.html" role="button">Lihat</a>
+                                    <a class="btn btn-success" href="<%= link2 %>" role="button">Lihat</a>
                                    <a class="btn btn-warning" href="ubahrps.html" role="button">Edit</a>
                                    <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Revisi</a>
                                  </div>
@@ -215,7 +215,7 @@
                                <td>San Francisco</td>
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                    <a class="btn btn-success" href="lihat-rps-dosen.html" role="button">Lihat</a>
+                                    <a class="btn btn-success" href="<%= link2 %>" role="button">Lihat</a>
                                    <a class="btn btn-warning" href="ubahrps.html" role="button">Edit</a>
                                    <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Revisi</a>
                                  </div>
@@ -228,7 +228,7 @@
                                <td>Tokyo</td>
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                    <a class="btn btn-success" href="lihat-rps-dosen.html" role="button">Lihat</a>
+                                    <a class="btn btn-success" href="<%= link2 %>" role="button">Lihat</a>
                                    <a class="btn btn-warning" href="ubahrps.html" role="button">Edit</a>
                                    <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Revisi</a>
                                  </div>
@@ -241,7 +241,7 @@
                                <td>San Francisco</td>
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                    <a class="btn btn-success" href="lihat-rps-dosen.html" role="button">Lihat</a>
+                                    <a class="btn btn-success" href="<%= link2 %>" role="button">Lihat</a>
                                    <a class="btn btn-warning" href="ubahrps.html" role="button">Edit</a>
                                    <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Revisi</a>
                                  </div>
@@ -254,7 +254,7 @@
                                <td>Edinburgh</td>
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                    <a class="btn btn-success" href="lihat-rps-dosen.html" role="button">Lihat</a>
+                                    <a class="btn btn-success" href="<%= link2 %>" role="button">Lihat</a>
                                    <a class="btn btn-warning" href="ubahrps.html" role="button">Edit</a>
                                    <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Revisi</a>
                                  </div>
@@ -267,7 +267,7 @@
                                <td>London</td>
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                    <a class="btn btn-success" href="lihat-rps-dosen.html" role="button">Lihat</a>
+                                    <a class="btn btn-success" href="<%= link2 %>" role="button">Lihat</a>
                                    <a class="btn btn-warning" href="ubahrps.html" role="button">Edit</a>
                                    <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Revisi</a>
                                  </div>
@@ -280,7 +280,7 @@
                                <td>London</td>
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                    <a class="btn btn-success" href="lihat-rps-dosen.html" role="button">Lihat</a>
+                                    <a class="btn btn-success" href="<%= link2 %>" role="button">Lihat</a>
                                    <a class="btn btn-warning" href="ubahrps.html" role="button">Edit</a>
                                    <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Revisi</a>
                                  </div>
@@ -293,7 +293,7 @@
                                <td>San Francisco</td>
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                    <a class="btn btn-success" href="lihat-rps-dosen.html" role="button">Lihat</a>
+                                    <a class="btn btn-success" href="<%= link2 %>" role="button">Lihat</a>
                                    <a class="btn btn-warning" href="ubahrps.html" role="button">Edit</a>
                                    <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Revisi</a>
                                  </div>
@@ -306,7 +306,7 @@
                                <td>Edinburgh</td>
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                    <a class="btn btn-success" href="lihat-rps-dosen.html" role="button">Lihat</a>
+                                    <a class="btn btn-success" href="<%= link2 %>" role="button">Lihat</a>
                                    <a class="btn btn-warning" href="ubahrps.html" role="button">Edit</a>
                                    <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Revisi</a>
                                  </div>
