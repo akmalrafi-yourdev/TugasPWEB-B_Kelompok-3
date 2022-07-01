@@ -19,7 +19,6 @@ const pool = mysql.createPool({
 app.get("/dashboardAdmin", (req, res) => {
   var url = "http://localhost:5500/user/matakuliah";
 
-
   axios
     .get(url)
     .then(function (response) {
@@ -34,57 +33,55 @@ app.get("/dashboardAdmin", (req, res) => {
     .catch(function (error) {
       console.log(error);
     });
-  });
+});
 
-  app.get("/kelolaDosenAdmin", (req, res) => {
+app.get("/kelolaDosenAdmin", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
 
-    var url = "http://localhost:5500/user/matakuliah";
-  
-    axios
-      .get(url)
-      .then(function (response) {
-        res.render(__dirname + "/views/admin/kelolaDosenAdmin.ejs", {
-          link: "dashboardAdmin",
-          rows: response.data,
-          });
-      })
-      .catch(function (error) {
-        console.log(error);
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/admin/kelolaDosenAdmin.ejs", {
+        link: "dashboardAdmin",
+        rows: response.data,
       });
+    })
+    .catch(function (error) {
+      console.log(error);
     });
+});
 
-    app.get("/persentaseMatkulAdmin", (req, res) => {
-      var url = "http://localhost:5500/user/matakuliah";
-    
-      axios
-        .get(url)
-        .then(function (response) {
-          res.render(__dirname + "/views/admin/persentaseMatkulAdmin.ejs", {
-            link: "dashboardAdmin",
-            rows: response.data,
-          });
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+app.get("/persentaseMatkulAdmin", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/admin/persentaseMatkulAdmin.ejs", {
+        link: "dashboardAdmin",
+        rows: response.data,
       });
-    
-    app.get("/petaCpmkAdmin", (req, res) => {
-        var url = "http://localhost:5500/user/matakuliah";
-      
-        axios
-          .get(url)
-          .then(function (response) {
-            res.render(__dirname + "/views/admin/petaCpmkAdmin.ejs", {
-              link: "dashboardAdmin",
-              rows: response.data,
-            });
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-        });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
 
+app.get("/petaCpmkAdmin", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/admin/petaCpmkAdmin.ejs", {
+        link: "dashboardAdmin",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
 
 //   pool.getConnection((err, connection) => {
 //     if (err) throw err;
@@ -139,29 +136,6 @@ app.set("view engine", "ejs");
 //     res.render('index', { text: 'Hey' })
 // })
 
-<<<<<<< HEAD
-
-// app.get("/testingmang", (req, res) => {
-//   var url = "http://localhost:5500/user/matakuliah";
-
-//   axios
-//     .get(url)
-//     .then(function (response) {
-//       res.render(__dirname + "/views/admin/dashboardAdmin.ejs", {
-//          rows: response.data,
-//        });
-//     })
-//     .catch(function (error) {
-//       console.log(error);
-//     });
-// });
-
-
-
-
-
-  
-=======
 app.get("/dashboardAdmin", (req, res) => {
   res.render(__dirname + "/views/admin/dashboardAdmin.ejs");
 });
@@ -174,6 +148,5 @@ app.get("/persentaseMatkulAdmin", (req, res) => {
 app.get("/petaCpmkAdmin", (req, res) => {
   res.render(__dirname + "/views/admin/petaCpmkAdmin.ejs");
 });
->>>>>>> 0300541d8398911e976581b6a14de73f28149c8c
 
 app.listen(port, () => console.info(`App listening on port ${port}`));
