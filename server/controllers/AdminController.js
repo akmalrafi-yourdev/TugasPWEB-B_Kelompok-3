@@ -71,6 +71,9 @@ const listRPS = async (req, res) => {
           model: IndexRPS.References,
         },
         {
+          model: IndexRPS.DosenPengampu,
+        },
+        {
           model: MataKuliah,
         },
       ],
