@@ -68,6 +68,40 @@ app.get("/kelolaDosenAdmin", (req, res) => {
     });
 });
 
+
+
+app.get("/awalDosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/awalDosen.ejs", {
+        link: "logindosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/awalAdmin", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/awalAdmin.ejs", {
+        link: "loginadmin",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
 app.get("/persentaseMatkulAdmin", (req, res) => {
   var url = "http://localhost:5500/user/matakuliah";
 
