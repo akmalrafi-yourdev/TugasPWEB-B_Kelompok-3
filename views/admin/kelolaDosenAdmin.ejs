@@ -105,7 +105,7 @@
                         <div class="d-grid gap-2 d-md-flex">
 
                        </div>
-                       <div class="dropdown" style="margin-bottom: 2%;">
+                       <!-- <div class="dropdown" style="margin-bottom: 2%;">
 
                         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                           + Tambah Dosen
@@ -118,7 +118,7 @@
                           <li><a class="dropdown-item" href="#">Semester 5</a></li>
                         </ul>
                         
-                      </div>        
+                      </div>         -->
                       
                       
                      <!-- TAMBAHKAN KONTEN DISINI -->
@@ -128,11 +128,13 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
+                                            <th>ID</th>
                                             <th>Nama Dosen Pengampu</th>
+                                            <th>NIP</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
+                                    <!-- <tfoot>
                                         <tr>
                                             <th>Name</th>
                                             <th>Position</th>
@@ -145,10 +147,11 @@
 
                                             <td>
                                             <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                                <a button type="button" class="btn btn-primary" href="ubahrps.html" role="button">Hapus</a>                                                                    
+                                                <a button type="button" class="btn btn-primary" href="ubahrps.html" role="button">Tambah</a>                                                                    
+                                                <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Hapus</a>                                                                    
                                             </div>
                                             </td>
-                                        </tr>
+                                        </tr> -->
 
 
                                         <%
@@ -157,13 +160,16 @@
                                         rows.forEach(function(data){
                                         %>
                                         <tr>
+                                            <td><%=data.id; %></td>
                                             <td><%=data.name; %></td>
+                                            <td><%=data.reg_id; %></td>
                                           <td>
                                           <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                             <div class="dropdown">
 
                                               <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                                <a button type="button" class="btn btn-primary" href="ubahrps.html" role="button">Hapus</a>                                                                    
+                                                <a button type="button" class="btn btn-primary" href="ubahrps.html" role="button">Tambah</a>                                                                    
+                                                <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Hapus</a>                                                                    
                                             </div>                                                                                    
                                           </div>
                                           </td>

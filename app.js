@@ -26,6 +26,55 @@ app.get("/dashboardAdmin", (req, res) => {
         link: "kelolaDosenAdmin",
         link1: "petaCpmkAdmin",
         link2: "persentaseMatkulAdmin",
+        link3: "dashboardAdmin",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/kelolaDosenAdmin", (req, res) => {
+  var url = "localhost:5500/admin/listdosen";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/admin/kelolaDosenAdmin.ejs", {
+        link: "dashboardAdmin",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/persentaseMatkulAdmin", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/admin/persentaseMatkulAdmin.ejs", {
+        link: "dashboardAdmin",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/petaCpmkAdmin", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/admin/petaCpmkAdmin.ejs", {
+        link: "dashboardAdmin",
         rows: response.data,
       });
     })
@@ -86,21 +135,6 @@ app.set("view engine", "ejs");
 // app.get('', (req, res) => {
 //     res.render('index', { text: 'Hey' })
 // })
-
-app.get("/testingmang", (req, res) => {
-  var url = "http://localhost:5500/user/matakuliah";
-
-  axios
-    .get(url)
-    .then(function (response) {
-      res.render(__dirname + "/views/admin/dashboardAdmin.ejs", {
-        rows: response.data,
-      });
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-});
 
 app.get("/dashboardAdmin", (req, res) => {
   res.render(__dirname + "/views/admin/dashboardAdmin.ejs");
