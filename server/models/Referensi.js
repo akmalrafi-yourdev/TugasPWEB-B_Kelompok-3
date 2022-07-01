@@ -1,36 +1,46 @@
+// import sequelize
 const Sequelize = require('sequelize');
-const db = require('../config/database');
-// import rps from "../models/RPS.js";
 
+const db = require('../config/database.js');
+const cpmk = require("./cpmk");
+
+// init DataTypes
 const { DataTypes } = Sequelize;
 
-const Dosen = db.define(
-  "lecturers",
+// Define schema
+const References = db.define(
+  "course_plan_references",
   {
+    // Define attributes
+
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BIGINT,
       autoIncrement: true,
       primaryKey: true,
     },
-    name: {
-      type: DataTypes.STRING,
-    },
-    reg_id: {
-      type: DataTypes.STRING,
-    },
-    phone: {
-      type: DataTypes.STRING,
-    },
-    status: {
+    course_plan_id: {
       type: DataTypes.INTEGER,
+    },
+    title: {
+      type: DataTypes.STRING,
+    },
+    author: {
+      type: DataTypes.STRING,
+    },
+    publisher: {
+      type: DataTypes.STRING,
+    },
+    year: {
+      type: DataTypes.INTEGER,
+    },
+    description: {
+      type: DataTypes.TEXT,
     },
     created_at: {
       type: DataTypes.DATE,
-      defaultValue: DataTypes.NOW
     },
     updated_at: {
       type: DataTypes.DATE,
-      // defaultValue: DataTypes.DATE
     },
   },
   {
@@ -40,4 +50,4 @@ const Dosen = db.define(
   }
 );
 
-module.exports = Dosen;
+module.exports = References;

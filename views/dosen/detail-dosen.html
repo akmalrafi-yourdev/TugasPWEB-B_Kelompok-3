@@ -8,8 +8,6 @@
     <!-- plugins:css -->
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
-    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="vendors/feather/feather.css" />
     <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" />
     <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
@@ -94,10 +92,7 @@
                   <div class="col" style="position: relative; margin-bottom: 2%"> 
                     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                       <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="pengelolaan-rps-dosen.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href="lihat-rps-dosen.html">lihat</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">detail</li>
-
+                        <li class="breadcrumb-item active" aria-current="page">Home</li>
                       </ol>
                     </nav>
                   </div>
@@ -108,24 +103,22 @@
                      
                      <!-- TAMBAHKAN KONTEN DISINI -->
                      <div class="card-body" style="box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);border-radius: 10px;">
-                      <div class="card">
-                       <h5 class="card-header card-title">CPMK</h5>
-                       <div class="card-body">
-                         <p class="card-text">
-                           <table id="datatablesSimple" class="table-striped table-bordered">
-                            <thead >
+                     <div class="card">
+                      <h5 class="card-header card-title">CPMK</h5>
+                      <div class="card-body">
+                        <p class="card-text">
+                          <table class="table table-striped">
+                            <thead>
                               <tr>
-                                <th scope="col">Kode</th>
+                                <th align="center" scope="col">Kode</th>
                                 <th scope="col">Deskripsi</th>
-                                <th scope="col">Aksi</th>
+                                <th style="align-items: center;" scope="col">Aksi</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <th scope="row">1</th>
-                                <td> Lorem ipsum dolor sit amet c
-
-                                </td>
+                                <td>Mark</td>
                                 <td>
                                 <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                   <a class="btn btn-warning icon-paper menu-icon" href="lihat-rps-dosen.html" role="button"></a>
@@ -136,9 +129,7 @@
                               </tr>
                               <tr>
                                 <th scope="row">2</th>
-                                <td>Mengintegrasikan solusi berbasis teknologi informasi secara efektif pada suatu organisasi
-
-                                </td>
+                                <td>Jacob</td>
                                 <td>
                                   <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                     <a class="btn btn-warning icon-paper menu-icon" href="lihat-rps-dosen.html" role="button"></a>
@@ -149,9 +140,7 @@
                               </tr>
                               <tr>
                                 <th scope="row">3</th>
-                                <td >	Menerapkan konsep-konsep dasar dalam merencanakan Sistem Informasi
-
-                                </td>
+                                <td >Larry the Bird</td>
                                 <td>
                                   <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                     <a class="btn btn-warning icon-paper menu-icon" href="lihat-rps-dosen.html" role="button"></a>
@@ -173,32 +162,21 @@
 
                   <div class="card-body" style="box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);border-radius: 10px;">
                     <div class="card">
-                     <h5 class="card-header card-title">Referensi</h5>
+                     <h5 class="card-header card-title table-secondary">Referensi</h5>
                      <div class="card-body">
                        <p class="card-text">
-                         <table id="datatablesSimple1" class="table-striped table-bordered">
+                         <table class="table table-striped">
                            <thead>
                              <tr>
-                               <th scope="col">No</th>
-                               <th scope="col">Title</th>
-                               <th scope="col">author</th>
-                               <th scope="col">Title</th>
-                               <th scope="col">Publisher</th>
-                               <th scope="col">Year</th>
-                               <th scope="col">Description</th>
+                               <th align="center" scope="col">Kode</th>
+                               <th scope="col">Deskripsi</th>
                                <th style="align-items: center;" scope="col">Aksi</th>
                              </tr>
                            </thead>
                            <tbody>
                              <tr>
                                <th scope="row">1</th>
-                               <td>Mark Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos beatae officiis esse magnam ipsam quia! Fugit, quae vel, itaque molestiae magni ipsum, adipisci aliquam repellendus in qui cupiditate quo commodi.</td>
                                <td>Mark</td>
-                               <td>Mark</td>
-                               <td>Mark</td>
-                               <td>Mark</td>
-                               <td>Mark</td>
-                              
                                <td>
                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                  <a class="btn btn-warning icon-paper menu-icon" href="lihat-rps-dosen.html" role="button"></a>
@@ -210,11 +188,6 @@
                              <tr>
                                <th scope="row">2</th>
                                <td>Jacob</td>
-                               <td>Mark</td>
-                               <td>Mark</td>
-                               <td>Mark</td>
-                               <td>Mark</td>
-                               <td>Mark</td>
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                    <a class="btn btn-warning icon-paper menu-icon" href="lihat-rps-dosen.html" role="button"></a>
@@ -226,11 +199,6 @@
                              <tr>
                                <th scope="row">3</th>
                                <td >Larry the Bird</td>
-                               <td>Mark aaaaaaaaaaa</td>
-                               <td>Mark</td>
-                               <td>Mark</td>
-                               <td>Mark</td>
-                               <td>Mark</td>
                                <td>
                                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                    <a class="btn btn-warning icon-paper menu-icon" href="lihat-rps-dosen.html" role="button"></a>
@@ -255,20 +223,18 @@
                    <h5 class="card-header card-title">Komponen Penilaian</h5>
                    <div class="card-body">
                      <p class="card-text">
-                      <table id="datatablesSimple2" class="table-striped table-bordered">
+                       <table class="table table-striped">
                          <thead>
                            <tr>
-                             <th scope="col">No</th>
-                             <th scope="col">Nama</th>
-                             <th scope="col">Persentase</th>
+                             <th align="center" scope="col">Kode</th>
+                             <th scope="col">Deskripsi</th>
                              <th style="align-items: center;" scope="col">Aksi</th>
                            </tr>
                          </thead>
                          <tbody>
                            <tr>
                              <th scope="row">1</th>
-                             <td>Project</td>
-                             <td>50</td>
+                             <td>Mark</td>
                              <td>
                              <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                <a class="btn btn-warning icon-paper menu-icon" href="lihat-rps-dosen.html" role="button"></a>
@@ -279,14 +245,24 @@
                            </tr>
                            <tr>
                              <th scope="row">2</th>
-                             <td>UTS</td>
-                             <td>50</td>
+                             <td>Jacob</td>
                              <td>
                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                  <a class="btn btn-warning icon-paper menu-icon" href="lihat-rps-dosen.html" role="button"></a>
                                 <a class="btn btn-danger icon-trash menu-icon" href="ubahrps.html" role="button"></a>
                               </div>
-                              </td> 
+                              </td>
+                            
+                           </tr>
+                           <tr>
+                             <th scope="row">3</th>
+                             <td >Larry the Bird</td>
+                             <td>
+                               <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
+                                 <a class="btn btn-warning icon-paper menu-icon" href="lihat-rps-dosen.html" role="button"></a>
+                                <a class="btn btn-danger icon-trash menu-icon" href="ubahrps.html" role="button"></a>
+                              </div>
+                              </td>
                            </tr>
                          </tbody>
                        </table>
@@ -304,21 +280,17 @@
                  <h5 class="card-header card-title">Pertemuan Mingguan</h5>
                  <div class="card-body">
                    <p class="card-text">
-                    <table id="datatablesSimple3" class="table-striped table-bordered">
+                     <table class="table table-striped">
                        <thead>
                          <tr>
-                           <th scope="col">Minggu ke-</th>
-                           <th scope="col">Materi</th>
-                           <th scope="col">Metode</th>
-                           <th scope="col">Pengelaman belajar</th>
+                           <th align="center" scope="col">Kode</th>
+                           <th scope="col">Deskripsi</th>
                            <th style="align-items: center;" scope="col">Aksi</th>
                          </tr>
                        </thead>
                        <tbody>
                          <tr>
                            <th scope="row">1</th>
-                           <td>Mark</td>
-                           <td>Mark</td>
                            <td>Mark</td>
                            <td>
                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
@@ -331,8 +303,6 @@
                          <tr>
                            <th scope="row">2</th>
                            <td>Jacob</td>
-                           <td>Mark</td>
-                           <td>Mark</td>
                            <td>
                              <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                <a class="btn btn-warning icon-paper menu-icon" href="lihat-rps-dosen.html" role="button"></a>
@@ -344,8 +314,6 @@
                          <tr>
                            <th scope="row">3</th>
                            <td >Larry the Bird</td>
-                           <td>Mark</td>
-                           <td>Mark</td>
                            <td>
                              <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                <a class="btn btn-warning icon-paper menu-icon" href="lihat-rps-dosen.html" role="button"></a>
@@ -379,16 +347,13 @@
     <!-- inject:js -->
     <script src="js/off-canvas.js"></script>
     <script src="js/hoverable-collapse.js"></script>
-    <script src="js/tight-grid.js"></script>
-    <script src="js/tabelsorter.js"></script>
-    <script src="js/boostrap-table.js"></script>
+    <script src="js/template.js"></script>
     <script src="js/settings.js"></script>
     <script src="js/todolist.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page-->
     <script src="js/dashboard.js"></script>
     <script src="js/Chart.roundedBarCharts.js"></script>
-    <script src="js/scrolltable.js"></script>
     <!-- End custom js for this page-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>

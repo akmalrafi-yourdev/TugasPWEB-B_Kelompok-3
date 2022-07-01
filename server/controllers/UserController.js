@@ -69,6 +69,9 @@ const matkulDetail = async (req, res) => {
         {
           model: IndexCPMK.cpmk,
         },
+        {
+          model: MataKuliah,
+        },
       ],
     });
     res.send(rps);

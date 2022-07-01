@@ -3,8 +3,19 @@ const MataKuliah = require("../models/MataKuliah");
 const IndexRPS = require("../models/IndexRPS");
 const IndexCPMK = require("../models/IndexCPMK");
 const DosenPengampu = require("../models/DosenPengampu");
+const Dosen = require("../models/Dosen");
 
 const Sequelize = require("sequelize");
+
+
+const getLecturers = async (req, res) => {
+  try {
+    const lecturer = await Dosen.findAll();
+    res.send(lecturer);
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 const inputCoursePlanLecturers = async (req, res) => {
   try {
@@ -51,12 +62,17 @@ const listRPS = async (req, res) => {
       },
       include: [
         {
-          model: IndexRPS.detailRPS
+          model: IndexRPS.detailRPS,
         },
         {
           model: IndexCPMK.cpmk,
         },
-
+        {
+          model: IndexRPS.References,
+        },
+        {
+          model: MataKuliah,
+        },
       ],
     });
     res.send(rps);
@@ -70,4 +86,5 @@ module.exports = {
   updateCoursePlanLecturers,
   createMatkul,
   listRPS,
+  getLecturers
 };
