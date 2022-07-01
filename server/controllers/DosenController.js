@@ -7,6 +7,8 @@ const rps = require("../models/rps.js");
 const mingguan = require("../models/PertemuanMingguanRPS.js");
 const detailRPS = require("../models/DetailRPS.js");
 const IndexRPS = require("../models/IndexRPS.js");
+const IndexCPMK = require("../models/IndexCPMK.js");
+const MataKuliah = require("../models/MataKuliah");
 
 // Get RPS
 const getRPS = async (req, res) => {
@@ -26,7 +28,31 @@ const getRPS = async (req, res) => {
 // Get detail RPS
 const getDetailRPS = async (req, res) => {
   try {
-    const dataDetailRPS = await detailRPS.findAll();
+    const dataDetailRPS = await IndexRPS.rps.findAll({
+      where: {
+        course_id: req.params.rpsid,
+      },
+      include: [
+        {
+          model: IndexRPS.detailRPS,
+        },
+        {
+          model: IndexCPMK.cpmk,
+        },
+        {
+          model: MataKuliah,
+        },
+        {
+          model: IndexRPS.DosenPengampu,
+        },
+        {
+          model: IndexRPS.References,
+        },
+        {
+          model: IndexRPS.KomponenPenilaian,
+        },
+      ],
+    });
     res.send(dataDetailRPS);
   } catch (err) {
     console.log(err);

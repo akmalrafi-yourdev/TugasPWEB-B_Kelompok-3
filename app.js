@@ -155,7 +155,7 @@ app.get("/pengelolaan-rps-dosen", (req, res) => {
 });
 
 app.get("/detail-dosen", (req, res) => {
-  var url = "http://localhost:5500/admin/rps";
+  var url = "http://localhost:5500/dosen/detail-rps/2";
 
   axios
     .get(url)

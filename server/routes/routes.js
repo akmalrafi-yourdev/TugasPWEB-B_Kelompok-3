@@ -17,7 +17,7 @@ router.get('/admin/listdosen', AdminController.getLecturers);
 
 //Dosen/Lecturer Routing
 router.get('/dosen/rps', DosenController.getRPS)
-router.get('/dosen/detail-rps', DosenController.getDetailRPS)
+router.get('/dosen/detail-rps/:rpsid', DosenController.getDetailRPS)
 router.post('/dosen/rps', DosenController.createRPS)
 router.put('/dosen/rps/:id', DosenController.updateRPS)
 router.get('/dosen/cpmk/:id', DosenController.getCPMK)

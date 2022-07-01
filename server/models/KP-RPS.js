@@ -7,7 +7,7 @@ const db =  require("../config/database.js");
 const { DataTypes } = Sequelize;
  
 // Define schema
-const penilaian = db.define('course_plan_assessments', {
+const KomponenPenilaian = db.define('course_plan_assessments', {
   // Define attributes
   id: {
     type: DataTypes.BIGINT,
@@ -41,4 +41,4 @@ const penilaian = db.define('course_plan_assessments', {
   });
  
 // Export model Product
-module.exports = penilaian;
+module.exports = KomponenPenilaian;
