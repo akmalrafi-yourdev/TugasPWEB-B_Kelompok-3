@@ -104,19 +104,30 @@
                        
                         <div class="d-grid gap-2 d-md-flex">
 
-                       </div>
-                       <div class="dropdown" style="margin-bottom: 2%;">
+                       </div>    
+                       <form action="http://localhost:5500/kelolaDosenAdmin">     
+                        <div class="form-group" style="margin-bottom:1%; margin-top: 1%; width: 40%;" >
+                          <select style="padding:5px 10px; width:100%;" class="chosen-select" name="" required> 
+                          <option value="">Silahkan pilih dosen</option>;
+                          <%
+                          if(rows.length!=0){
+                          var i=1;
+                          rows.forEach(function(data){
+                          %> 
 
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                          + Tambah Dosen
-                        </button>              
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="#">Afriyanti Dwi Kartika, MT</a></li>
-                          <li><a class="dropdown-item" href="#">Jefril Rahmadoni, M.Kom</a></li>
-                          <li><a class="dropdown-item" href="#">Meza Silvana, MT</a></li>                       
-                          <li><a class="dropdown-item" href="#">Prof. Surya Afnarius. Ph.D</a></li>
-                          <li><a class="dropdown-item" href="#">Semester 5</a></li>
-                        </ul>
+                          <option value="B001"><%=data.name; %></option>;
+                          <%  i++; }) %>
+                          <% } else{ %>
+                              <tr>
+                                  <td colspan="7">No Data Found</td>
+                              </tr>
+                          <% } %>
+                          </select>
+                          <input type="submit" style="margin-left:102%; "  id="dropdownMenuButton1">
+                        </input> 
+                       </form>  
+                      </div>
+ 
                         
                       </div>        
                       
@@ -140,16 +151,6 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <tr>
-                                            <td>Ricky Akbar, M.Kom</td>
-
-                                            <td>
-                                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                                <a button type="button" class="btn btn-primary" href="ubahrps.html" role="button">Hapus</a>                                                                    
-                                            </div>
-                                            </td>
-                                        </tr>
-
 
                                         <%
                                         if(rows.length!=0){
