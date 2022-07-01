@@ -8,17 +8,17 @@
     <!-- plugins:css -->
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/vendors/feather/feather.css" />
-    <link rel="stylesheet" href="/vendors/ti-icons/css/themify-icons.css" />
-    <link rel="stylesheet" href="/vendors/css/vendor.bundle.base.css" />
+    <link rel="stylesheet" href="vendors/feather/feather.css" />
+    <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" />
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
     <!-- endinject -->
     <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="/vendors/datatables.net-bs4/dataTables.bootstrap4.css" />
-    <link rel="stylesheet" href="/vendors/ti-icons/css/themify-icons.css" />
-    <link rel="stylesheet" type="text/css" href="/js/select.dataTables.min.css" />
+    <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css" />
+    <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css" />
+    <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css" />
     <!-- End plugin css for this page -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="/views/admin/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
   </head>
@@ -27,8 +27,8 @@
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo mr-1" href="<%=  link %>"><img src="logo-unand.png" class="mr-2" alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini mr-1" href="<%=  link %>"><img src="logo-mini.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo mr-1" href="index.html"><img src="logo-unand.png" class="mr-2" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini mr-1" href="index.html"><img src="logo-mini.png" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -66,13 +66,13 @@
             </div>
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="<%=  link %>">
+              <a class="nav-link" href="index.html">
                 <i class="icon-grid menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pengelolaan-rps.html">
+              <a class="nav-link" href="pengelolaan-rps-dosen.html">
                 <i class="icon-paper menu-icon"></i>
                 <span class="menu-title">Pengelolaan RPS</span>
               </a>
@@ -86,35 +86,53 @@
               <div class="col-md-12">
                 <div class="row">
                   <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                    <h3 class="font-weight-bold">RPS - Persentase Metode Mata Kuliah</h3>
-                    <h6 class="font-weight-normal mb-0">Case Based - Project Based</h6>
+                    <h3 class="font-weight-bold">Tambah Komponen Penilaian</h3>
+                    <h6 class="font-weight-normal mb-0">Menambahkan Komponen Penilaian baru</h6>
                   </div>
                   <div class="col" style="position: relative; margin-bottom: 2%"> 
                     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                       <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Persentase Matkul</li>
+                        <li class="breadcrumb-item"><a href="pengelolaan-rps-dosen.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="lihat-rps-dosen.html">lihat</a></li>
+                        <li  class="breadcrumb-item"><a href="detail-dosen.html">detail</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">tambah</li>
+
                       </ol>
                     </nav>
                   </div>
                 </div>
                 <div id="layoutSidenav_content">
                  <main>
-                 </ol>
+                     </ol>
+                     
                      <!-- TAMBAHKAN KONTEN DISINI -->
-         
-                     <div class="chart-container" style="height:50%; width:50%;">
-                      <canvas id="myChart"></canvas>
-                  </div>
+                     <div class="card-body" style="box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);border-radius: 10px;" >
+                     <div class="card mb-4">
+                       <div class="card-body">
+                        <h4 class="card-title">Komponen Penilaian</h4>
+                        <div class="form-group row">
+                          <div class="col">
+                            <label>Nama</label>
+                            <div id="the-basics">
+                              <input class="typeahead" type="text" placeholder="Masukkan nama penilaian"  />
+                            </div>
+                          </div>
+                          <div class="col">
+                            <label>Persentase</label>
+                            <div id="bloodhound">
+                              <input class="typeahead" type="text" placeholder="persentase penilaian (%)" style="width: 40%;" />
+                            </div>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mr-2">Simpan</button>
+                        <button class="btn btn-light">Batal</button>
+                      </form>
+                       </div>
+                     </div>
+                    </div>
                    </div>
                  </main>
-                 <footer class="py-4 bg-light mt-auto">
-                   <div class="container-fluid px-4">
-                     <div class="d-flex align-items-center justify-content-between small">
-                      <a button type="button" onclick="window.print();" class="btn btn-primary" href="#" role="button" style="margin-left: 80%;">Cetak </a>
-                     </div>
-                   </div>
-                 </footer>
+
                </div>
              </div>
           </div>
@@ -131,63 +149,31 @@
     <!-- container-scroller -->
 
     <!-- plugins:js -->
-    <script src="/vendors/js/vendor.bundle.base.js"></script>
+    <script src="vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
-    <script src="/vendors/chart.js/Chart.min.js"></script>
-    <script src="/vendors/datatables.net/jquery.dataTables.js"></script>
-    <script src="/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
-    <script src="/js/dataTables.select.min.js"></script>
+    <script src="vendors/chart.js/Chart.min.js"></script>
+    <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="js/dataTables.select.min.js"></script>
 
     <!-- End plugin js for this page -->
     <!-- inject:js -->
-    <script src="/js/off-canvas.js"></script>
-    <script src="/js/hoverable-collapse.js"></script>
-    <script src="/js/template.js"></script>
-    <script src="/js/settings.js"></script>
-    <script src="/js/todolist.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/todolist.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page-->
-    <script src="/js/dashboard.js"></script>
-    <script src="/js/Chart.roundedBarCharts.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/Chart.roundedBarCharts.js"></script>
     <!-- End custom js for this page-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="/js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-    <script src="/js/datatables-simple-demo.js"></script>
+    <script src="js/datatables-simple-demo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-
-      
-        const data = {
-        labels: [
-            'Project Based',
-            'Case Based',
-        ],
-        datasets: [{
-            label: 'My First Dataset',
-            data: [60, 40],
-            backgroundColor: [
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
-            ],
-            hoverOffset: 4
-        }]
-        };
-      
-        const config = {
-          type: 'pie',
-          data: data,
-          options: {}
-        };
-      </script>
-      <script>
-        const myChart = new Chart(
-          document.getElementById('myChart'),
-          config
-        );
-      </script>
   </body>
 </html>
