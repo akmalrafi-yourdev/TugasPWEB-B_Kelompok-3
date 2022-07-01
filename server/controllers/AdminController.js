@@ -7,7 +7,6 @@ const Dosen = require("../models/Dosen");
 
 const Sequelize = require("sequelize");
 
-
 const getLecturers = async (req, res) => {
   try {
     const lecturer = await Dosen.findAll();
@@ -54,11 +53,11 @@ const updateCoursePlanLecturers = async (req, res) => {
   }
 };
 
-const listRPS = async (req, res) => {
+const getRPS = async (req, res) => {
   try {
     const rps = await IndexRPS.rps.findAll({
       where: {
-        course_id: req.params.id,
+        id: req.params.id,
       },
       include: [
         {
@@ -69,6 +68,36 @@ const listRPS = async (req, res) => {
         },
         {
           model: IndexRPS.References,
+        },
+        {
+          model: IndexRPS.DosenPengampu,
+        },
+        {
+          model: MataKuliah,
+        },
+      ],
+    });
+    res.send(rps);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const listRPS = async (req, res) => {
+  try {
+    const rps = await IndexRPS.rps.findAll({
+      include: [
+        {
+          model: IndexRPS.detailRPS,
+        },
+        {
+          model: IndexCPMK.cpmk,
+        },
+        {
+          model: IndexRPS.References,
+        },
+        {
+          model: IndexRPS.DosenPengampu,
         },
         {
           model: MataKuliah,
@@ -86,5 +115,6 @@ module.exports = {
   updateCoursePlanLecturers,
   createMatkul,
   listRPS,
-  getLecturers
+  getRPS,
+  getLecturers,
 };

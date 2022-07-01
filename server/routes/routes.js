@@ -11,7 +11,8 @@ const router = express.Router();
 router.post("/admin/inputDosenPengampu/", AdminController.inputCoursePlanLecturers);
 router.put("/admin/updateDosenPengampu/:id", AdminController.updateCoursePlanLecturers);
 router.post('/admin/matakuliah', AdminController.createMatkul);
-router.get('/admin/rps/:id', AdminController.listRPS);
+router.get('/admin/rps', AdminController.listRPS);
+router.get('/admin/rps/:id', AdminController.getRPS);
 router.get('/admin/listdosen', AdminController.getLecturers);
 
 //Dosen/Lecturer Routing
@@ -19,7 +20,7 @@ router.get('/dosen/rps', DosenController.getRPS)
 router.get('/dosen/detail-rps', DosenController.getDetailRPS)
 router.post('/dosen/rps', DosenController.createRPS)
 router.put('/dosen/rps/:id', DosenController.updateRPS)
-router.get('/dosen/cpmk', DosenController.getCPMK)
+router.get('/dosen/cpmk/:id', DosenController.getCPMK)
 router.post('/dosen/cpmk', DosenController.createCPMK)
 router.put('/dosen/cpmk/:id', DosenController.updateCPMK)
 router.delete('/dosen/cpmk/:id', DosenController.deleteCPMK)

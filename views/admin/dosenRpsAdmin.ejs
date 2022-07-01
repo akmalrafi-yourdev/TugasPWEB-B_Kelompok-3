@@ -87,7 +87,7 @@
                 <div class="row">
                   <div class="col-12 col-xl-8 mb-4 mb-xl-0">
                     <h3 class="font-weight-bold">RPS - Kelola Dosen</h3>
-                    <h6 class="font-weight-normal mb-0">List Dosen Mata Kuliah</h6>
+                    <h6 class="font-weight-normal mb-0">List Dosen yang Mengampu Mata Kuliah Ini</h6>
                   </div>
                   <div class="col" style="position: relative; margin-bottom: 2%"> 
                     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -105,8 +105,12 @@
                         <div class="d-grid gap-2 d-md-flex">
 
                        </div>
+                       <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
+                        <a button type="button" class="btn btn-primary" href="ubahrps.html" role="button">Tambah</a>                                                                    
+                        <!-- <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Hapus</a>                                                                     -->
+                    </div>
                        <!-- <div class="dropdown" style="margin-bottom: 2%;">
-
+                        <a button type="button" class="btn btn-primary" href="ubahrps.html" role="button">Tambah</a>
                         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                           + Tambah Dosen
                         </button>              
@@ -116,9 +120,9 @@
                           <li><a class="dropdown-item" href="#">Meza Silvana, MT</a></li>                       
                           <li><a class="dropdown-item" href="#">Prof. Surya Afnarius. Ph.D</a></li>
                           <li><a class="dropdown-item" href="#">Semester 5</a></li>
-                        </ul>
+                        </ul> -->
                         
-                      </div>         -->
+                      </div>   
                       
                       
                      <!-- TAMBAHKAN KONTEN DISINI -->
@@ -128,9 +132,9 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Nama Dosen Pengampu</th>
-                                            <th>NIP</th>
+                                            <th>No </th>
+                                            <th>No Matkul</th>
+                                            <th>Nama Dosen Yang Mengampu</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -160,7 +164,7 @@
                                         rows.forEach(function(data){
                                         %>
                                         <tr>
-                                            <td><%=data.id; %></td>
+                                            <td><%=i; %></td>
                                             <td><%=data.name; %></td>
                                             <td><%=data.reg_id; %></td>
                                           <td>
@@ -168,7 +172,6 @@
                                             <div class="dropdown">
 
                                               <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                                <a button type="button" class="btn btn-primary" href="ubahrps.html" role="button">Tambah</a>                                                                    
                                                 <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Hapus</a>                                                                    
                                             </div>                                                                                    
                                           </div>
