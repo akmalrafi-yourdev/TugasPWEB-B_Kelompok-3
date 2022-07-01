@@ -8,6 +8,7 @@ const mataKuliah = require("../models/MataKuliah");
 const References = require("./Referensi");
 const DosenPengampu = require("./DosenPengampu");
 const Dosen = require("./Dosen");
+const KomponenPenilaian = require("./Kp-rps");
 
 rps.hasMany(detailRPS, { foreignKey: "course_plan_id" });
 detailRPS.belongsTo(rps, { foreignKey: "id" });
@@ -17,6 +18,9 @@ References.belongsTo(rps, { foreignKey: "id" });
 
 rps.hasMany(DosenPengampu, { foreignKey: "course_plan_id" });
 DosenPengampu.belongsTo(rps, { foreignKey: "id" });
+
+rps.hasMany(KomponenPenilaian, { foreignKey: "course_plan_id" });
+KomponenPenilaian.belongsTo(rps, { foreignKey: "id" });
 
 // rps.hasMany(cpmk, { foreignKey: "course_plan_id" });
 // cpmk.belongsTo(rps, { foreignKey: "id"});
@@ -28,4 +32,5 @@ module.exports = {
   cpmk,
   References,
   DosenPengampu,
+  KomponenPenilaian
 };
