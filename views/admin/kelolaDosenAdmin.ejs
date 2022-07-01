@@ -87,7 +87,7 @@
                 <div class="row">
                   <div class="col-12 col-xl-8 mb-4 mb-xl-0">
                     <h3 class="font-weight-bold">RPS - Kelola Dosen</h3>
-                    <h6 class="font-weight-normal mb-0">List Dosen Pengampu Mata Kuliah</h6>
+                    <h6 class="font-weight-normal mb-0">List Dosen Mata Kuliah</h6>
                   </div>
                   <div class="col" style="position: relative; margin-bottom: 2%"> 
                     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -104,21 +104,32 @@
                        
                         <div class="d-grid gap-2 d-md-flex">
 
-                       </div>
-                       <!-- <div class="dropdown" style="margin-bottom: 2%;">
+                       </div>    
+                       <form action="http://localhost:5500/kelolaDosenAdmin">     
+                        <div class="form-group" style="margin-bottom:1%; margin-top: 1%; width: 40%;" >
+                          <select style="padding:5px 10px; width:100%;" class="chosen-select" name="" required> 
+                          <option value="">Silahkan pilih dosen</option>;
+                          <%
+                          if(rows.length!=0){
+                          var i=1;
+                          rows.forEach(function(data){
+                          %> 
 
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                          + Tambah Dosen
-                        </button>              
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="#">Afriyanti Dwi Kartika, MT</a></li>
-                          <li><a class="dropdown-item" href="#">Jefril Rahmadoni, M.Kom</a></li>
-                          <li><a class="dropdown-item" href="#">Meza Silvana, MT</a></li>                       
-                          <li><a class="dropdown-item" href="#">Prof. Surya Afnarius. Ph.D</a></li>
-                          <li><a class="dropdown-item" href="#">Semester 5</a></li>
-                        </ul>
+                          <option value="B001"><%=data.name; %></option>;
+                          <%  i++; }) %>
+                          <% } else{ %>
+                              <tr>
+                                  <td colspan="7">No Data Found</td>
+                              </tr>
+                          <% } %>
+                          </select>
+                          <input type="submit" style="margin-left:102%; "  id="dropdownMenuButton1">
+                        </input> 
+                       </form>  
+                      </div>
+ 
                         
-                      </div>         -->
+                      </div>        
                       
                       
                      <!-- TAMBAHKAN KONTEN DISINI -->
@@ -128,13 +139,11 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>No.</th>
                                             <th>Nama Dosen Pengampu</th>
-                                            <th>NIP</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
-                                    <!-- <tfoot>
+                                    <tfoot>
                                         <tr>
                                             <th>Name</th>
                                             <th>Position</th>
@@ -142,17 +151,6 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <tr>
-                                            <td>Ricky Akbar, M.Kom</td>
-
-                                            <td>
-                                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                                <a button type="button" class="btn btn-primary" href="ubahrps.html" role="button">Tambah</a>                                                                    
-                                                <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Hapus</a>                                                                    
-                                            </div>
-                                            </td>
-                                        </tr> -->
-
 
                                         <%
                                         if(rows.length!=0){
@@ -160,16 +158,13 @@
                                         rows.forEach(function(data){
                                         %>
                                         <tr>
-                                            <td><%=i; %></td>
                                             <td><%=data.name; %></td>
-                                            <td><%=data.reg_id; %></td>
                                           <td>
                                           <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
                                             <div class="dropdown">
 
                                               <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                                                <a button type="button" class="btn btn-primary" href="<%= link2 %>" role="button">Tambah Dosen RPS</a>                                                                    
-                                                <!-- <a button type="button" class="btn btn-danger" href="ubahrps.html" role="button">Hapus</a> -->                                                                     
+                                                <a button type="button" class="btn btn-primary" href="ubahrps.html" role="button">Hapus</a>                                                                    
                                             </div>                                                                                    
                                           </div>
                                           </td>
