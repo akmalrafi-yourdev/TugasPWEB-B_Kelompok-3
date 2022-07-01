@@ -134,13 +134,14 @@ app.get("/dashboarddosen", (req, res) => {
 });
 
 app.get("/pengelolaan-rps-dosen", (req, res) => {
-  var url = "http://localhost:5500/user/matakuliah";
+  var url = "http://localhost:5500/admin/rps";
 
   axios
     .get(url)
     .then(function (response) {
       res.render(__dirname + "/views/dosen/pengelolaan-rps-dosen.ejs", {
         link: "dashboarddosen",
+        link1: "pengelolaan-rps-dosen",
         link2: "pengelolaan-rps-dosen",
         link3: "tambahrps",
         link4: "ubahrps",
@@ -154,7 +155,7 @@ app.get("/pengelolaan-rps-dosen", (req, res) => {
 });
 
 app.get("/detail-dosen", (req, res) => {
-  var url = "http://localhost:5500/user/matakuliah";
+  var url = "http://localhost:5500/admin/rps";
 
   axios
     .get(url)
