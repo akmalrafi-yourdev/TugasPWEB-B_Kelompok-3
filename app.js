@@ -84,8 +84,7 @@ app.get("/petaCpmkAdmin", (req, res) => {
     });
 });
 
-<<<<<<< HEAD
-=======
+
 app.get("/tambahrps", (req, res) => {
   var url = "http://localhost:5500/user/matakuliah";
 
@@ -94,6 +93,7 @@ app.get("/tambahrps", (req, res) => {
     .then(function (response) {
       res.render(__dirname + "/views/dosen/tambahrps.ejs", {
         link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
         rows: response.data,
       });
     })
@@ -166,6 +166,8 @@ app.get("/ubahrps", (req, res) => {
     .get(url)
     .then(function (response) {
       res.render(__dirname + "/views/dosen/ubahrps.ejs", {
+        link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
         link4: "ubahrps",
         rows: response.data,
       });
@@ -198,7 +200,6 @@ app.get("/ubahrps", (req, res) => {
 //       }
 //     });
 //   });
->>>>>>> 5989f8b195e0071d9dc346c73a3c20e9dde77b1f
 
 // Static Files
 app.use(express.static("style"));
