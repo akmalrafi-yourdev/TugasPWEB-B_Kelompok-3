@@ -43,6 +43,7 @@ app.get("/kelolaDosenAdmin", (req, res) => {
     .then(function (response) {
       res.render(__dirname + "/views/admin/kelolaDosenAdmin.ejs", {
         link: "dashboardAdmin",
+        link2: "dosenRpsAdmin",
         rows: response.data,
       });
     })
