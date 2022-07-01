@@ -83,10 +83,7 @@ app.get("/petaCpmkAdmin", (req, res) => {
     });
 });
 
-<<<<<<< HEAD
 
-=======
->>>>>>> f26501fc904e60199301197f9014b8cba288083f
 app.get("/tambahrps", (req, res) => {
   var url = "http://localhost:5500/user/matakuliah";
 
@@ -132,7 +129,27 @@ app.get("/pengelolaan-rps-dosen", (req, res) => {
         link2: "pengelolaan-rps-dosen",
         link3: "tambahrps",
         link4: "ubahrps",
-        link5: "detail-dosen",
+        link5: "lihat-rps-dosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/lihat-rps-dosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/lihat-rps-dosen.ejs", {
+        link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
+        link3: "tambahrps",
+        link4: "detail-dosen",
+        link5: "lihat-rps-dosen",
         rows: response.data,
       });
     })
@@ -150,9 +167,175 @@ app.get("/detail-dosen", (req, res) => {
       res.render(__dirname + "/views/dosen/detail-dosen.ejs", {
         link: "dashboarddosen",
         link2: "pengelolaan-rps-dosen",
-        link3: "tambahrps",
-        link4: "ubahrps",
-        link5: "detail-dosen",
+        link3: "tambah-cpmk-dosen",
+        link4: "detail-dosen",
+        link5: "tambah-komponen-dosen",
+        link6: "tambah-pertemuan-dosen",
+        link7: "tambah-referensi-dosen",
+        link8: "edit-cpmk-dosen",
+        link9: "edit-komponen-dosen",
+        link10: "edit-pertemuan-dosen",
+        link11: "edit-referensi-dosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/edit-cpmk-dosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/edit-cpmk-dosen.ejs", {
+        link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
+        link3: "tambah-cpmk-dosen",
+        link4: "detail-dosen",
+        link5: "lihat-rps-dosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/edit-komponen-dosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/edit-komponen-dosen.ejs", {
+        link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
+        link3: "tambah-cpmk-dosen",
+        link4: "detail-dosen",
+        link5: "lihat-rps-dosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/edit-pertemuan-dosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/edit-pertemuan-dosen.ejs", {
+        link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
+        link3: "tambah-cpmk-dosen",
+        link4: "detail-dosen",
+        link5: "lihat-rps-dosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/edit-referensi-dosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/edit-referensi-dosen.ejs", {
+        link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
+        link3: "tambah-cpmk-dosen",
+        link4: "detail-dosen",
+        link5: "lihat-rps-dosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/tambah-cpmk-dosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/tambah-cpmk-dosen.ejs", {
+        link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
+        link3: "tambah-cpmk-dosen",
+        link4: "detail-dosen",
+        link5: "lihat-rps-dosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/tambah-referensi-dosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/tambah-referensi-dosen.ejs", {
+        link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
+        link3: "tambah-cpmk-dosen",
+        link4: "detail-dosen",
+        link5: "lihat-rps-dosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/tambah-komponen-dosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/tambah-komponen-dosen.ejs", {
+        link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
+        link3: "tambah-komponen-dosen",
+        link4: "detail-dosen",
+        link5: "lihat-rps-dosen",
+        rows: response.data,
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
+
+app.get("/tambah-pertemuan-dosen", (req, res) => {
+  var url = "http://localhost:5500/user/matakuliah";
+
+  axios
+    .get(url)
+    .then(function (response) {
+      res.render(__dirname + "/views/dosen/tambah-pertemuan-dosen.ejs", {
+        link: "dashboarddosen",
+        link2: "pengelolaan-rps-dosen",
+        link3: "tambah-pertemuan-dosen",
+        link4: "detail-dosen",
+        link5: "lihat-rps-dosen",
         rows: response.data,
       });
     })
